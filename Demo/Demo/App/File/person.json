@@ -1,0 +1,32 @@
+{
+    "name":"张三",
+    "age":18,
+    "sex":"男",
+    "phone":13322332233,
+    "address":[
+               "广州",
+               "江门"
+               ],
+    "height":175,
+    "weight":70,
+    "food":{
+        "fruit":[
+                 {
+                 "fruit":"apple"
+                 },
+                 {
+                 "fruit":"orange"
+                 }
+                 ],
+        "meat":"chicken"
+    },
+    "sport":[
+             {
+             "one":"football"
+             },
+             {
+             "two":"basketball"
+             }
+             ],
+    "code": "www.zhangshan.com.cn"
+}
