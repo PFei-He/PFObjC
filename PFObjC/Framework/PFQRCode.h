@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.1
+//  vesion: 0.0.2
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -33,13 +33,22 @@
 @interface PFQRCode : NSObject
 
 /**
- *  @brief 生成二维码图片
+ *  @brief 生成二维码
  *  @note 无
  *  @param string: 用于生成二维码的字符串
- *  @param imageNamed: 放置于二维码中间的定制图
  *  @param codeSize: 二维码的尺寸
- *  @return 二维码图片
+ *  @return 二维码
  */
-+ (UIImage *)createWithString:(NSString *)string imageNamed:(NSString *)name codeSize:(CGFloat)size;
++ (UIImage *)createWithString:(NSString *)string codeSize:(CGFloat)size;
+
+/**
+ *  @brief 生成定制二维码
+ *  @note 无
+ *  @param string: 用于生成二维码的字符串
+ *  @param codeSize: 二维码的尺寸
+ *  @param imageNamed: 放置于二维码中间的定制图
+ *  @return 二维码
+ */
++ (UIImage *)createWithString:(NSString *)string codeSize:(CGFloat)size imageNamed:(NSString *)name;
 
 @end

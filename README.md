@@ -1,15 +1,15 @@
 [PFObjC](https://github.com/PFei-He/PFObjC)
 ===
 
-[![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://raw.githubusercontent.com/PFei-He/PFObjC/master/LICENSE)&nbsp;
-[![Support](https://img.shields.io/badge/support-iOS%207%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
- [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/PFObjC.svg)](https://img.shields.io/cocoapods/v/PFObjC.svg)
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://raw.githubusercontent.com/PFei-He/PFObjC/master/LICENSE)
+[![Support](https://img.shields.io/badge/support-iOS%207%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/PFObjC.svg)](https://img.shields.io/cocoapods/v/PFObjC.svg)
 
 对系统API进行简单封装，实现常用功能
 
 版本
 ---
-0.0.1
+0.0.2
 
 说明
 ---

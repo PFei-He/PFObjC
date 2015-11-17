@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.1
+//  vesion: 0.0.2
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -32,8 +32,14 @@
 
 @implementation PFQRCode
 
-//生成二维码图片
-+ (UIImage *)createWithString:(NSString *)string imageNamed:(NSString *)name codeSize:(CGFloat)size
+//生成二维码
++ (UIImage *)createWithString:(NSString *)string codeSize:(CGFloat)size
+{
+    return [PFQRCode createWithString:string codeSize:size imageNamed:nil];
+}
+
+//生成定制二维码
++ (UIImage *)createWithString:(NSString *)string codeSize:(CGFloat)size imageNamed:(NSString *)name
 {
     //将要生成二维码的字符串转为数据类型
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
@@ -63,41 +69,51 @@
     
     //获取CIContext
     CIContext *context = [CIContext contextWithOptions:nil];
-    CGImageRef bitmapImage = [context createCGImage:filter.outputImage fromRect:extent];
+    CGImageRef bitmap = [context createCGImage:filter.outputImage fromRect:extent];
     CGContextSetInterpolationQuality(bitmapRef, kCGInterpolationNone);
     CGContextScaleCTM(bitmapRef, scale, scale);
-    CGContextDrawImage(bitmapRef, extent, bitmapImage);
+    CGContextDrawImage(bitmapRef, extent, bitmap);
     
     //保存位图到图片
     CGImageRef scaledImage = CGBitmapContextCreateImage(bitmapRef);
     CGContextRelease(bitmapRef);
-    CGImageRelease(bitmapImage);
+    CGImageRelease(bitmap);
     
-    //中部定制图
-    UIImage *iconImage = [UIImage imageNamed:name];
+    //生成二维码
+    UIImage *QRCode = [UIImage imageWithCGImage:scaledImage];
     
-    //获取二维码的尺寸
-    CGRect rect = CGRectMake(0,
-                             0,
-                             [UIImage imageWithCIImage:[filter.outputImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)]].size.width,
-                             [UIImage imageWithCIImage:[filter.outputImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)]].size.height);
+    if (name) {
+        
+        //中部定制图
+        UIImage *iconImage = [UIImage imageNamed:name];
+        
+        //获取二维码的尺寸
+        CGRect rect = CGRectMake(0,
+                                 0,
+                                 [UIImage imageWithCIImage:[filter.outputImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)]].size.width,
+                                 [UIImage imageWithCIImage:[filter.outputImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)]].size.height);
+        
+        //开始绘图
+        UIGraphicsBeginImageContext(rect.size);
+        
+        //将定制图绘制于二维码中间
+        [QRCode drawInRect:rect];
+        CGSize size = CGSizeMake(rect.size.width * 0.25, rect.size.height * 0.25);
+        CGFloat x = (rect.size.width - size.width) * 0.5;
+        CGFloat y = (rect.size.height - size.height) * 0.5;
+        [iconImage drawInRect:CGRectMake(x, y, size.width, size.height)];
+        
+        //生成带图标的二维码
+        UIImage *iconQRCode = UIGraphicsGetImageFromCurrentImageContext();
+        
+        //结束绘图
+        UIGraphicsEndImageContext();
+        
+        //返回定制二维码
+        return iconQRCode;
+    }
     
-    //开始绘图
-    UIGraphicsBeginImageContext(rect.size);
-    
-    //将定制图绘制于二维码中间
-    [[UIImage imageWithCGImage:scaledImage] drawInRect:rect];
-    CGSize imageSize = CGSizeMake(rect.size.width * 0.25, rect.size.height * 0.25);
-    CGFloat x = (rect.size.width - imageSize.width) * 0.5;
-    CGFloat y = (rect.size.height - imageSize.height) * 0.5;
-    [iconImage drawInRect:CGRectMake(x, y, imageSize.width, imageSize.height)];
-    
-    //生成带图标的二维码
-    UIImage *QRCode = UIGraphicsGetImageFromCurrentImageContext();
-    
-    //结束绘图
-    UIGraphicsEndImageContext();
-    
+    //返回二维码
     return QRCode;
 }
 
