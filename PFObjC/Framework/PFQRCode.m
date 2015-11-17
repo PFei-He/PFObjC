@@ -49,7 +49,7 @@
     
     //设置内容和纠错级别
     [filter setValue:data forKey:@"inputMessage"];
-    [filter setValue:@"H"forKey:@"inputCorrectionLevel"];
+    [filter setValue:@"H" forKey:@"inputCorrectionLevel"];
     
     //得到一个矩形
     CGRect extent = CGRectIntegral(filter.outputImage.extent);
