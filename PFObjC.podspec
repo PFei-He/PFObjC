@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = 'PFObjC'
-  s.version                 = '0.0.3'
+  s.version                 = '0.0.4'
   s.summary                 = '对系统API进行简单封装，实现常用功能'
   s.homepage                = 'https://github.com/PFei-He/PFObjC'
   s.license                 = { :type => 'MIT', :file => 'LICENSE' }
@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Framework' do |ss|
-    ss.source_files = 'PFObjC/Framework/PF{File,Model,QRCode,Time}.{h,m}'
+    ss.source_files = 'PFObjC/Framework/PF{File,Model,QRCode,Scanner,Time}.{h,m}'
   end
 end

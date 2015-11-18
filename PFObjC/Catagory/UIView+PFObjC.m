@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.3
+//  vesion: 0.0.4
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,6 +27,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+//  ***** UIView类目 *****
+//
 
 #import "UIView+PFObjC.h"
 
@@ -34,11 +36,13 @@
 
 #pragma mark -
 
+//坐标
 - (CGPoint)origin
 {
     return self.frame.origin;
 }
 
+//坐标
 - (void)setOrigin:(CGPoint)origin
 {
     CGRect frame = self.frame;
@@ -46,11 +50,13 @@
     self.frame = frame;
 }
 
+//X坐标
 - (CGFloat)x
 {
     return self.frame.origin.x;
 }
 
+//X坐标
 - (void)setX:(CGFloat)x
 {
     CGRect frame = self.frame;
@@ -58,11 +64,13 @@
     self.frame = frame;
 }
 
+//Y坐标
 - (CGFloat)y
 {
     return self.frame.origin.y;
 }
 
+//Y坐标
 - (void)setY:(CGFloat)y
 {
     CGRect frame = self.frame;
@@ -72,11 +80,13 @@
 
 #pragma mark -
 
+//尺寸
 - (CGSize)size
 {
     return self.frame.size;
 }
 
+//尺寸
 - (void)setSize:(CGSize)size
 {
     CGRect frame = self.frame;
@@ -84,11 +94,13 @@
     self.frame = frame;
 }
 
+//宽
 - (CGFloat)width
 {
     return self.frame.size.width;
 }
 
+//宽
 - (void)setWidth:(CGFloat)width
 {
     CGRect frame = self.frame;
@@ -96,11 +108,13 @@
     self.frame = frame;
 }
 
+//高
 - (CGFloat)height
 {
     return self.frame.size.height;
 }
 
+//高
 - (void)setHeight:(CGFloat)height
 {
     CGRect frame = self.frame;
@@ -110,11 +124,13 @@
 
 #pragma mark -
 
+//上边缘
 - (CGFloat)top
 {
     return self.frame.origin.y;
 }
 
+//上边缘
 - (void)setTop:(CGFloat)top
 {
     CGRect frame = self.frame;
@@ -122,11 +138,13 @@
     self.frame = frame;
 }
 
+//左边缘
 - (CGFloat)left
 {
     return self.frame.origin.x;
 }
 
+//左边缘
 - (void)setLeft:(CGFloat)left
 {
     CGRect frame = self.frame;
@@ -134,11 +152,13 @@
     self.frame = frame;
 }
 
+//下边缘
 - (CGFloat)bottom
 {
     return self.frame.origin.y + self.frame.size.height;
 }
 
+//下边缘
 - (void)setBottom:(CGFloat)bottom
 {
     CGRect frame = self.frame;
@@ -146,11 +166,13 @@
     self.frame = frame;
 }
 
+//右边缘
 - (CGFloat)right
 {
     return self.frame.origin.x + self.frame.size.width;
 }
 
+//右边缘
 - (void)setRight:(CGFloat)right
 {
     CGRect frame = self.frame;
@@ -160,11 +182,19 @@
 
 #pragma mark -
 
+//中心点
+- (CGPoint)boundsCenter
+{
+    return CGPointMake( CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+}
+
+//中心点的X坐标
 - (CGFloat)centerX
 {
     return self.center.x;
 }
 
+//中心点的X坐标
 - (void)setCenterX:(CGFloat)centerX
 {
     CGPoint center = self.center;
@@ -172,11 +202,13 @@
     self.center = center;
 }
 
+//中心点的Y坐标
 - (CGFloat)centerY
 {
     return self.center.y;
 }
 
+//中心点的Y坐标
 - (void)setCenterY:(CGFloat)centerY
 {
     CGPoint center = self.center;
@@ -184,13 +216,9 @@
     self.center = center;
 }
 
-- (CGPoint)boundsCenter
-{
-    return CGPointMake( CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-}
-
 #pragma mark -
 
+//
 - (CGPoint)offset
 {
     CGPoint point = CGPointZero;
@@ -205,6 +233,7 @@
     return point;
 }
 
+//
 - (void)setOffset:(CGPoint)offset
 {
     UIView * view = self;
@@ -224,11 +253,13 @@
     self.frame = frame;
 }
 
+//
 - (CGPoint)position
 {
     return self.frame.origin;
 }
 
+//
 - (void)setPosition:(CGPoint)position
 {
     CGRect frame = self.frame;

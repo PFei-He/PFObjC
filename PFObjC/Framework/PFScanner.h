@@ -1,5 +1,5 @@
 //
-//  PFQRCode.h
+//  PFScanner.h
 //  PFObjC
 //
 //  Created by PFei_He on 15/11/17.
@@ -27,30 +27,39 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** 二维码生成 *****
+//  ***** 扫描器 *****
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PFQRCode : NSObject
+@class PFScanner;
+
+@protocol PFScannerDelegate <NSObject>
 
 /**
- *  @brief 生成二维码
+ *  @brief 扫描完成
  *  @note 无
- *  @param string: 用于生成二维码的字符串
- *  @param size: 二维码的尺寸
- *  @return 二维码
+ *  @param string: 扫描结果转换成的字符串
+ *  @return 无
  */
-+ (UIImage *)createWithString:(NSString *)string codeSize:(CGFloat)size;
+- (void)scanner:(PFScanner *)scanner scanCompletedWithString:(NSString *)string;
+
+@end
+
+@interface PFScanner : NSObject
+
+/* 详见AVCaptureOutput类的rectOfInterest */
+///扫描器的工作区域
+@property (assign, nonatomic)   CGRect                  rectOfInterest;
+///代理
+@property (weak, nonatomic)     id<PFScannerDelegate>   delegate;
 
 /**
- *  @brief 生成定制二维码
+ *  @brief 创建扫描器
  *  @note 无
- *  @param string: 用于生成二维码的字符串
- *  @param size: 二维码的尺寸
- *  @param name: 放置于二维码中间的定制图
- *  @return 二维码
+ *  @param view: 添加扫描器的视图
+ *  @return 无
  */
-+ (UIImage *)createWithString:(NSString *)string codeSize:(CGFloat)size iconNamed:(NSString *)name;
+- (void)createInView:(UIView *)view;
 
 @end

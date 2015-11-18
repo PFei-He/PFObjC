@@ -9,7 +9,7 @@
 
 版本
 ---
-0.0.3
+0.0.4
 
 说明
 ---
@@ -17,11 +17,15 @@
 * `PFFile` - 实现文件生成和读写功能
 * `PFModel` - JSON模型的基类
 * `PFQRCode` - 利用AVFoundation框架生成二维码
+* `PFScanner` - 扫描器
 * `PFTime` - 实现时间获取和转化功能
 
 #### Catagory
 * `NSString+PFObjC` - NSString类目
 * `UIView+PFObjC` - UIView类目
+ 
+#### Other
+* `PFObjC.h` - 类库接口
 
 安装
 --- 
@@ -33,11 +37,12 @@
 #### CocoaPods
 ```
 platform:ios, '7.0'
-pod "PFObjC", "~> 0.0"
+pod 'PFObjC', '~> 0.0'
 ```
 
 使用
 ---
+#### CocoaPods
 ```
 #import <PFObjC/PFObjC.h>
 ```
