@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.2
+//  vesion: 0.0.3
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -35,11 +35,11 @@
 //生成二维码
 + (UIImage *)createWithString:(NSString *)string codeSize:(CGFloat)size
 {
-    return [PFQRCode createWithString:string codeSize:size imageNamed:nil];
+    return [PFQRCode createWithString:string codeSize:size iconNamed:nil];
 }
 
 //生成定制二维码
-+ (UIImage *)createWithString:(NSString *)string codeSize:(CGFloat)size imageNamed:(NSString *)name
++ (UIImage *)createWithString:(NSString *)string codeSize:(CGFloat)size iconNamed:(NSString *)name
 {
     //将要生成二维码的字符串转为数据类型
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];

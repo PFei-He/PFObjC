@@ -45,7 +45,7 @@
     Fruits *fruits = [[Fruits alloc] initWithJSON:food.fruit[0]];
     NSLog(@"%@", fruits.fruit);
     
-    self.imageView.image = [PFQRCode createWithString:[Person sharedInstance].code codeSize:self.imageView.width imageNamed:@"Custom Figure.jpg"];
+    self.imageView.image = [PFQRCode createWithString:[Person sharedInstance].code codeSize:self.imageView.width iconNamed:@"Custom Figure.jpg"];
 }
 
 - (void)didReceiveMemoryWarning
