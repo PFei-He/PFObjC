@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.4
+//  vesion: 0.0.5
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -90,7 +90,13 @@
      * p.s. 由于苹果的API设置问题，必须先将输出（AVCaptureMetadataOutput）添加到会话（AVCaptureSession），再对输出的元数组对象类型（metadataObjectTypes）进行设置
      */
     //设置输出的格式
-    self.output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
+    self.output.metadataObjectTypes = @[AVMetadataObjectTypeCode128Code,
+                                        AVMetadataObjectTypeCode39Code,
+                                        AVMetadataObjectTypeCode39Mod43Code,
+                                        AVMetadataObjectTypeCode93Code,
+                                        AVMetadataObjectTypeEAN13Code,
+                                        AVMetadataObjectTypeEAN8Code,
+                                        AVMetadataObjectTypeQRCode];
     
     //设置预览
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];

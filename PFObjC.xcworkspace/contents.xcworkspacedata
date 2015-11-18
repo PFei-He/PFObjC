@@ -42,6 +42,12 @@
             location = "group:PFQRCode.m">
          </FileRef>
          <FileRef
+            location = "group:PFScanner.h">
+         </FileRef>
+         <FileRef
+            location = "group:PFScanner.m">
+         </FileRef>
+         <FileRef
             location = "group:PFTime.h">
          </FileRef>
          <FileRef
