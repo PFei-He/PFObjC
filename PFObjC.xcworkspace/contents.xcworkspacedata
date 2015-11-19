@@ -8,6 +8,12 @@
          location = "group:Catagory"
          name = "Catagory">
          <FileRef
+            location = "group:NSDate+PFObjC.h">
+         </FileRef>
+         <FileRef
+            location = "group:NSDate+PFObjC.m">
+         </FileRef>
+         <FileRef
             location = "group:NSString+PFObjC.h">
          </FileRef>
          <FileRef
