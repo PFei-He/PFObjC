@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.platform                = :ios, '7.0'
   s.ios.deployment_target   = '7.0'
   s.source                  = { :git => 'https://github.com/PFei-He/PFObjC.git', :tag => s.version }
-  s.source_files            = 'PFObjC/{NSDate,NSString,UIView}+PFObjC.{h,m}, PF{File,Model,QRCode,Scanner,Time}.{h,m}, PFObjC.h'
-  s.public_header_files     = 'PFObjC/PFObjC.h'
+  s.source_files            = 'PFObjC/{NSDate,NSString,UIView}+PFObjC.{h,m}', 'PFObjC/PF{File,Model,QRCode,Scanner,Time}.{h,m}', 'PFObjC/PFObjC.h'
+  s.public_header_files     = 'PFObjC/{NSDate,NSString,UIView}+PFObjC.h', 'PFObjC/PF{File,Model,QRCode,Scanner,Time}.h', 'PFObjC/PFObjC.h'
   s.requires_arc            = true
 end
