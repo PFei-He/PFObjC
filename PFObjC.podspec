@@ -7,16 +7,8 @@ Pod::Spec.new do |s|
   s.author                  = { 'PFei-He' => '498130877@qq.com' }
   s.platform                = :ios, '7.0'
   s.ios.deployment_target   = '7.0'
-  s.source                  = { :git => 'https://github.com/PFei-He/PFObjC.git', :tag => s.version, :submodules => true }
-  s.source_files            = 'PFObjC/PFObjC.h'
+  s.source                  = { :git => 'https://github.com/PFei-He/PFObjC.git', :tag => s.version }
+  s.source_files            = 'PFObjC/{NSDate,NSString,UIView}+PFObjC.{h,m}, PF{File,Model,QRCode,Scanner,Time}.{h,m}, PFObjC.h'
   s.public_header_files     = 'PFObjC/PFObjC.h'
   s.requires_arc            = true
-
-  s.subspec 'Catagory' do |ss|
-    ss.source_files = 'PFObjC/Catagory/{NSDate,NSString,UIView}+PFObjC.{h,m}'
-  end
-
-  s.subspec 'Framework' do |ss|
-    ss.source_files = 'PFObjC/Framework/PF{File,Model,QRCode,Scanner,Time}.{h,m}'
-  end
 end

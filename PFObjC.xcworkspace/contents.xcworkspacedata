@@ -4,64 +4,56 @@
    <Group
       location = "group:PFObjC"
       name = "PFObjC">
-      <Group
-         location = "group:Catagory"
-         name = "Catagory">
-         <FileRef
-            location = "group:NSDate+PFObjC.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSDate+PFObjC.m">
-         </FileRef>
-         <FileRef
-            location = "group:NSString+PFObjC.h">
-         </FileRef>
-         <FileRef
-            location = "group:NSString+PFObjC.m">
-         </FileRef>
-         <FileRef
-            location = "group:UIView+PFObjC.h">
-         </FileRef>
-         <FileRef
-            location = "group:UIView+PFObjC.m">
-         </FileRef>
-      </Group>
-      <Group
-         location = "group:Framework"
-         name = "Framework">
-         <FileRef
-            location = "group:PFFile.h">
-         </FileRef>
-         <FileRef
-            location = "group:PFFile.m">
-         </FileRef>
-         <FileRef
-            location = "group:PFModel.h">
-         </FileRef>
-         <FileRef
-            location = "group:PFModel.m">
-         </FileRef>
-         <FileRef
-            location = "group:PFQRCode.h">
-         </FileRef>
-         <FileRef
-            location = "group:PFQRCode.m">
-         </FileRef>
-         <FileRef
-            location = "group:PFScanner.h">
-         </FileRef>
-         <FileRef
-            location = "group:PFScanner.m">
-         </FileRef>
-         <FileRef
-            location = "group:PFTime.h">
-         </FileRef>
-         <FileRef
-            location = "group:PFTime.m">
-         </FileRef>
-      </Group>
+      <FileRef
+         location = "group:NSDate+PFObjC.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSDate+PFObjC.m">
+      </FileRef>
+      <FileRef
+         location = "group:NSString+PFObjC.h">
+      </FileRef>
+      <FileRef
+         location = "group:NSString+PFObjC.m">
+      </FileRef>
+      <FileRef
+         location = "group:PFFile.h">
+      </FileRef>
+      <FileRef
+         location = "group:PFFile.m">
+      </FileRef>
+      <FileRef
+         location = "group:PFModel.h">
+      </FileRef>
+      <FileRef
+         location = "group:PFModel.m">
+      </FileRef>
       <FileRef
          location = "group:PFObjC.h">
+      </FileRef>
+      <FileRef
+         location = "group:PFQRCode.h">
+      </FileRef>
+      <FileRef
+         location = "group:PFQRCode.m">
+      </FileRef>
+      <FileRef
+         location = "group:PFScanner.h">
+      </FileRef>
+      <FileRef
+         location = "group:PFScanner.m">
+      </FileRef>
+      <FileRef
+         location = "group:PFTime.h">
+      </FileRef>
+      <FileRef
+         location = "group:PFTime.m">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+PFObjC.h">
+      </FileRef>
+      <FileRef
+         location = "group:UIView+PFObjC.m">
       </FileRef>
    </Group>
    <FileRef

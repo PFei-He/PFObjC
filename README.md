@@ -13,17 +13,17 @@
 
 说明
 ---
+#### Catagory
+* `NSDate+PFObjC` - NSDate类目
+* `NSString+PFObjC` - NSString类目
+* `UIView+PFObjC` - UIView类目
+
 #### Framework
 * `PFFile` - 实现文件生成和读写功能
 * `PFModel` - JSON模型的基类
 * `PFQRCode` - 利用AVFoundation框架生成二维码
 * `PFScanner` - 扫描器
 * `PFTime` - 实现时间获取和转换功能
-
-#### Catagory
-* `NSDate+PFObjC` - NSDate类目
-* `NSString+PFObjC` - NSString类目
-* `UIView+PFObjC` - UIView类目
  
 #### Other
 * `PFObjC.h` - 类库接口
