@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.5
+//  vesion: 0.0.6
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,22 +27,78 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** 时间获取和转化 *****
+//  ***** 时间获取和转换 *****
 //
 
 #import "PFTime.h"
+#import "NSDate+PFObjC.h"
 
 @implementation PFTime
 
-//根据格式获取当前时间
+//获取当前时间
++ (NSString *)currentTime
+{
+    return [NSDate stringFromDate:[NSDate date]];
+}
+
+//获取当前时间
 + (NSString *)currentTimeWithFormat:(NSString *)format
 {
-    NSDate *date = [NSDate date];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateStyle = NSDateFormatterFullStyle;
-    formatter.dateFormat = format;
-    NSString *string = [formatter stringFromDate:date];
-    return string;
+    return [NSDate stringFromDate:[NSDate date] format:format];
+}
+
+//获取当前时间
++ (NSString *)currentTimeWithDateStyle:(NSDateFormatterStyle)dateStyle timeStyle:(NSDateFormatterStyle)timeStyle
+{
+    return [NSDate stringFromDate:[NSDate date] dateStyle:dateStyle timeStyle:timeStyle];
+}
+
+//将时间戳转换为时间
++ (NSString *)timeFromTimestamp:(double)timestamp
+{
+    return [NSDate stringFromDate:[NSDate dateWithTimeIntervalSince1970:timestamp]];
+}
+
+//将时间戳转换为时间
++ (NSString *)timeFromTimestamp:(double)timestamp format:(NSString *)format
+{
+    return [NSDate stringFromDate:[NSDate dateWithTimeIntervalSince1970:timestamp] format:format];
+}
+
+//将时间戳转换为时间
++ (NSString *)timeFromTimestamp:(double)timestamp dateStyle:(NSDateFormatterStyle)dateStyle timeStyle:(NSDateFormatterStyle)timeStyle
+{
+    return [NSDate stringFromDate:[NSDate dateWithTimeIntervalSince1970:timestamp] dateStyle:dateStyle timeStyle:timeStyle];
+}
+
+//获取当前时间戳
++ (NSString *)currentTimestamp
+{
+    return [NSString stringWithFormat:@"%ld", (long)[[NSDate date] timeIntervalSince1970]];
+}
+
+//将时间转换为时间戳
++ (NSString *)timestampFromTime:(NSString *)time
+{
+    return [NSString stringWithFormat:@"%ld", (long)[[NSDate dateFromString:time] timeIntervalSince1970]];
+}
+
+//将时间转换为时间戳
++ (NSString *)timestampFromTime:(NSString *)time format:(NSString *)format
+{
+    return [NSString stringWithFormat:@"%ld", (long)[[NSDate dateFromString:time format:format] timeIntervalSince1970]];
+}
+
+//将时间转换为时间戳
++ (NSString *)timestampFromTime:(NSString *)time dateStyle:(NSDateFormatterStyle)dateStyle timeStyle:(NSDateFormatterStyle)timeStyle
+{
+    return [NSString stringWithFormat:@"%ld", (long)[[NSDate dateFromString:time dateStyle:dateStyle timeStyle:timeStyle] timeIntervalSince1970]];
+}
+
+//获取当前时区
++ (NSTimeZone *)currentTimeZone
+{
+    return [NSTimeZone systemTimeZone];
 }
 
 @end

@@ -9,7 +9,7 @@
 
 版本
 ---
-0.0.5
+0.0.6
 
 说明
 ---
@@ -18,9 +18,10 @@
 * `PFModel` - JSON模型的基类
 * `PFQRCode` - 利用AVFoundation框架生成二维码
 * `PFScanner` - 扫描器
-* `PFTime` - 实现时间获取和转化功能
+* `PFTime` - 实现时间获取和转换功能
 
 #### Catagory
+* `NSDate+PFObjC` - NSDate类目
 * `NSString+PFObjC` - NSString类目
 * `UIView+PFObjC` - UIView类目
  
