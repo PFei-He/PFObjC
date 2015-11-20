@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.6
+//  vesion: 0.0.7
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -46,6 +46,20 @@
 
 @implementation PFScanner
 
+#pragma mark - Life Cycle
+
+//初始化
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        //设置输出（Metadata元数据）
+        self.output = [[AVCaptureMetadataOutput alloc] init];
+    }
+    return self;
+}
+
 #pragma mark - Property Methods
 
 //扫描器的工作区域
@@ -66,14 +80,13 @@
     //设置输入，把摄像头作为输入设备
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];
     
-    //设置输出（Metadata元数据）
-    self.output = [[AVCaptureMetadataOutput alloc] init];
-    
     //设置输出的代理
     [self.output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     
     //拍摄会话
     self.session = [[AVCaptureSession alloc] init];
+    
+    //设置拍摄质量
     self.session.sessionPreset = AVCaptureSessionPresetHigh;
     
     //添加输入

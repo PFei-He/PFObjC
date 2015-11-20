@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.6
+//  vesion: 0.0.7
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -33,14 +33,14 @@
 #ifndef PFObjC_h
 #define PFObjC_h
 
+#import "NSDate+PFObjC.h"
+#import "NSString+PFObjC.h"
+#import "UIView+PFObjC.h"
+
 #import "PFFile.h"
 #import "PFModel.h"
 #import "PFQRCode.h"
 #import "PFScanner.h"
 #import "PFTime.h"
-
-#import "NSDate+PFObjC.h"
-#import "NSString+PFObjC.h"
-#import "UIView+PFObjC.h"
 
 #endif /* PFObjC_h */

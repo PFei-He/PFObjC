@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.6
+//  vesion: 0.0.7
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -37,8 +37,7 @@
 //创建文件
 + (void)createFile:(NSString *)fileName
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *path = [paths[0] stringByAppendingPathComponent:fileName];
+    NSString *path = [PFFile pathWithFileName:fileName];
     NSFileManager *manager = [NSFileManager defaultManager];
     if (![manager fileExistsAtPath:path]) {//如果文件不存在则创建文件
         [manager createFileAtPath:path contents:nil attributes:nil];
@@ -48,9 +47,7 @@
 //读取文件
 + (NSDictionary *)readFile:(NSString *)fileName
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *path = [paths[0] stringByAppendingPathComponent:fileName];
-    return [[NSDictionary alloc] initWithContentsOfFile:path];
+    return [[NSDictionary alloc] initWithContentsOfFile:[PFFile pathWithFileName:fileName]];
 }
 
 //读取JSON文件
@@ -65,9 +62,14 @@
 //写入文件
 + (BOOL)writeToFile:(NSString *)fileName params:(NSDictionary *)params
 {
+    return [params writeToFile:[PFFile pathWithFileName:fileName] atomically:YES];
+}
+
+///文件路径
++ (NSString *)pathWithFileName:(NSString *)fileName
+{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:fileName];
-    return [params writeToFile:path atomically:YES];
+    return [paths[0] stringByAppendingPathComponent:fileName];
 }
 
 @end

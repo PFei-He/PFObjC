@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		454B36E81BFEB4DA00FA085C /* NSDate+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 454B36E31BFEB4DA00FA085C /* NSDate+PFObjC.m */; };
+		454B36E91BFEB4DA00FA085C /* NSString+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 454B36E51BFEB4DA00FA085C /* NSString+PFObjC.m */; };
+		454B36EA1BFEB4DA00FA085C /* UIView+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 454B36E71BFEB4DA00FA085C /* UIView+PFObjC.m */; };
+		454B36F51BFEB4EF00FA085C /* PFFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 454B36EC1BFEB4EF00FA085C /* PFFile.m */; };
+		454B36F61BFEB4EF00FA085C /* PFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 454B36EE1BFEB4EF00FA085C /* PFModel.m */; };
+		454B36F71BFEB4EF00FA085C /* PFQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 454B36F01BFEB4EF00FA085C /* PFQRCode.m */; };
+		454B36F81BFEB4EF00FA085C /* PFScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 454B36F21BFEB4EF00FA085C /* PFScanner.m */; };
+		454B36F91BFEB4EF00FA085C /* PFTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 454B36F41BFEB4EF00FA085C /* PFTime.m */; };
 		456225B91BF579F9008202A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 456225B81BF579F9008202A7 /* main.m */; };
 		456225BC1BF579F9008202A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 456225BB1BF579F9008202A7 /* AppDelegate.m */; };
 		456225C41BF579F9008202A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456225C31BF579F9008202A7 /* Assets.xcassets */; };
@@ -15,17 +23,26 @@
 		456225DC1BF57A4A008202A7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 456225DB1BF57A4A008202A7 /* RootViewController.m */; };
 		456225E11BF57B4E008202A7 /* RootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 456225E01BF57B4E008202A7 /* RootModel.m */; };
 		456788261BFC97200034EB18 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 456788251BFC97200034EB18 /* person.json */; };
-		45FCA16C1BFE191700EC63E7 /* NSDate+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FCA15C1BFE191700EC63E7 /* NSDate+PFObjC.m */; };
-		45FCA16D1BFE191700EC63E7 /* NSString+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FCA15E1BFE191700EC63E7 /* NSString+PFObjC.m */; };
-		45FCA16E1BFE191700EC63E7 /* PFFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FCA1601BFE191700EC63E7 /* PFFile.m */; };
-		45FCA16F1BFE191700EC63E7 /* PFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FCA1621BFE191700EC63E7 /* PFModel.m */; };
-		45FCA1701BFE191700EC63E7 /* PFQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FCA1651BFE191700EC63E7 /* PFQRCode.m */; };
-		45FCA1711BFE191700EC63E7 /* PFScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FCA1671BFE191700EC63E7 /* PFScanner.m */; };
-		45FCA1721BFE191700EC63E7 /* PFTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FCA1691BFE191700EC63E7 /* PFTime.m */; };
-		45FCA1731BFE191700EC63E7 /* UIView+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45FCA16B1BFE191700EC63E7 /* UIView+PFObjC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		454B36E21BFEB4DA00FA085C /* NSDate+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+PFObjC.h"; sourceTree = "<group>"; };
+		454B36E31BFEB4DA00FA085C /* NSDate+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+PFObjC.m"; sourceTree = "<group>"; };
+		454B36E41BFEB4DA00FA085C /* NSString+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PFObjC.h"; sourceTree = "<group>"; };
+		454B36E51BFEB4DA00FA085C /* NSString+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PFObjC.m"; sourceTree = "<group>"; };
+		454B36E61BFEB4DA00FA085C /* UIView+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PFObjC.h"; sourceTree = "<group>"; };
+		454B36E71BFEB4DA00FA085C /* UIView+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PFObjC.m"; sourceTree = "<group>"; };
+		454B36EB1BFEB4EF00FA085C /* PFFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFile.h; sourceTree = "<group>"; };
+		454B36EC1BFEB4EF00FA085C /* PFFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFile.m; sourceTree = "<group>"; };
+		454B36ED1BFEB4EF00FA085C /* PFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFModel.h; sourceTree = "<group>"; };
+		454B36EE1BFEB4EF00FA085C /* PFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFModel.m; sourceTree = "<group>"; };
+		454B36EF1BFEB4EF00FA085C /* PFQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFQRCode.h; sourceTree = "<group>"; };
+		454B36F01BFEB4EF00FA085C /* PFQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFQRCode.m; sourceTree = "<group>"; };
+		454B36F11BFEB4EF00FA085C /* PFScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFScanner.h; sourceTree = "<group>"; };
+		454B36F21BFEB4EF00FA085C /* PFScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFScanner.m; sourceTree = "<group>"; };
+		454B36F31BFEB4EF00FA085C /* PFTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFTime.h; sourceTree = "<group>"; };
+		454B36F41BFEB4EF00FA085C /* PFTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFTime.m; sourceTree = "<group>"; };
+		454B36FA1BFEB50500FA085C /* PFObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFObjC.h; sourceTree = "<group>"; };
 		456225B41BF579F9008202A7 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456225B81BF579F9008202A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		456225BA1BF579F9008202A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,23 +57,6 @@
 		456225E01BF57B4E008202A7 /* RootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootModel.m; sourceTree = "<group>"; };
 		456225E21BF57B8A008202A7 /* Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		456788251BFC97200034EB18 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
-		45FCA15B1BFE191700EC63E7 /* NSDate+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+PFObjC.h"; sourceTree = "<group>"; };
-		45FCA15C1BFE191700EC63E7 /* NSDate+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+PFObjC.m"; sourceTree = "<group>"; };
-		45FCA15D1BFE191700EC63E7 /* NSString+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PFObjC.h"; sourceTree = "<group>"; };
-		45FCA15E1BFE191700EC63E7 /* NSString+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PFObjC.m"; sourceTree = "<group>"; };
-		45FCA15F1BFE191700EC63E7 /* PFFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFile.h; sourceTree = "<group>"; };
-		45FCA1601BFE191700EC63E7 /* PFFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFile.m; sourceTree = "<group>"; };
-		45FCA1611BFE191700EC63E7 /* PFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFModel.h; sourceTree = "<group>"; };
-		45FCA1621BFE191700EC63E7 /* PFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFModel.m; sourceTree = "<group>"; };
-		45FCA1631BFE191700EC63E7 /* PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFObjC.h; sourceTree = "<group>"; };
-		45FCA1641BFE191700EC63E7 /* PFQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFQRCode.h; sourceTree = "<group>"; };
-		45FCA1651BFE191700EC63E7 /* PFQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFQRCode.m; sourceTree = "<group>"; };
-		45FCA1661BFE191700EC63E7 /* PFScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFScanner.h; sourceTree = "<group>"; };
-		45FCA1671BFE191700EC63E7 /* PFScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFScanner.m; sourceTree = "<group>"; };
-		45FCA1681BFE191700EC63E7 /* PFTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFTime.h; sourceTree = "<group>"; };
-		45FCA1691BFE191700EC63E7 /* PFTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFTime.m; sourceTree = "<group>"; };
-		45FCA16A1BFE191700EC63E7 /* UIView+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PFObjC.h"; sourceTree = "<group>"; };
-		45FCA16B1BFE191700EC63E7 /* UIView+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PFObjC.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +70,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		454B36E01BFEB4BE00FA085C /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				454B36EB1BFEB4EF00FA085C /* PFFile.h */,
+				454B36EC1BFEB4EF00FA085C /* PFFile.m */,
+				454B36ED1BFEB4EF00FA085C /* PFModel.h */,
+				454B36EE1BFEB4EF00FA085C /* PFModel.m */,
+				454B36EF1BFEB4EF00FA085C /* PFQRCode.h */,
+				454B36F01BFEB4EF00FA085C /* PFQRCode.m */,
+				454B36F11BFEB4EF00FA085C /* PFScanner.h */,
+				454B36F21BFEB4EF00FA085C /* PFScanner.m */,
+				454B36F31BFEB4EF00FA085C /* PFTime.h */,
+				454B36F41BFEB4EF00FA085C /* PFTime.m */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		454B36E11BFEB4C500FA085C /* Catagory */ = {
+			isa = PBXGroup;
+			children = (
+				454B36E21BFEB4DA00FA085C /* NSDate+PFObjC.h */,
+				454B36E31BFEB4DA00FA085C /* NSDate+PFObjC.m */,
+				454B36E41BFEB4DA00FA085C /* NSString+PFObjC.h */,
+				454B36E51BFEB4DA00FA085C /* NSString+PFObjC.m */,
+				454B36E61BFEB4DA00FA085C /* UIView+PFObjC.h */,
+				454B36E71BFEB4DA00FA085C /* UIView+PFObjC.m */,
+			);
+			name = Catagory;
+			sourceTree = "<group>";
+		};
 		456225AB1BF579F9008202A7 = {
 			isa = PBXGroup;
 			children = (
@@ -166,23 +196,9 @@
 		45FCA15A1BFE191700EC63E7 /* PFObjC */ = {
 			isa = PBXGroup;
 			children = (
-				45FCA15B1BFE191700EC63E7 /* NSDate+PFObjC.h */,
-				45FCA15C1BFE191700EC63E7 /* NSDate+PFObjC.m */,
-				45FCA15D1BFE191700EC63E7 /* NSString+PFObjC.h */,
-				45FCA15E1BFE191700EC63E7 /* NSString+PFObjC.m */,
-				45FCA15F1BFE191700EC63E7 /* PFFile.h */,
-				45FCA1601BFE191700EC63E7 /* PFFile.m */,
-				45FCA1611BFE191700EC63E7 /* PFModel.h */,
-				45FCA1621BFE191700EC63E7 /* PFModel.m */,
-				45FCA1631BFE191700EC63E7 /* PFObjC.h */,
-				45FCA1641BFE191700EC63E7 /* PFQRCode.h */,
-				45FCA1651BFE191700EC63E7 /* PFQRCode.m */,
-				45FCA1661BFE191700EC63E7 /* PFScanner.h */,
-				45FCA1671BFE191700EC63E7 /* PFScanner.m */,
-				45FCA1681BFE191700EC63E7 /* PFTime.h */,
-				45FCA1691BFE191700EC63E7 /* PFTime.m */,
-				45FCA16A1BFE191700EC63E7 /* UIView+PFObjC.h */,
-				45FCA16B1BFE191700EC63E7 /* UIView+PFObjC.m */,
+				454B36E11BFEB4C500FA085C /* Catagory */,
+				454B36E01BFEB4BE00FA085C /* Framework */,
+				454B36FA1BFEB50500FA085C /* PFObjC.h */,
 			);
 			name = PFObjC;
 			path = ../../../PFObjC;
@@ -259,18 +275,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45FCA16C1BFE191700EC63E7 /* NSDate+PFObjC.m in Sources */,
-				45FCA1701BFE191700EC63E7 /* PFQRCode.m in Sources */,
-				45FCA1731BFE191700EC63E7 /* UIView+PFObjC.m in Sources */,
-				45FCA16D1BFE191700EC63E7 /* NSString+PFObjC.m in Sources */,
+				454B36E81BFEB4DA00FA085C /* NSDate+PFObjC.m in Sources */,
+				454B36F61BFEB4EF00FA085C /* PFModel.m in Sources */,
+				454B36F51BFEB4EF00FA085C /* PFFile.m in Sources */,
+				454B36E91BFEB4DA00FA085C /* NSString+PFObjC.m in Sources */,
+				454B36F91BFEB4EF00FA085C /* PFTime.m in Sources */,
 				456225BC1BF579F9008202A7 /* AppDelegate.m in Sources */,
-				45FCA16F1BFE191700EC63E7 /* PFModel.m in Sources */,
-				45FCA16E1BFE191700EC63E7 /* PFFile.m in Sources */,
-				45FCA1711BFE191700EC63E7 /* PFScanner.m in Sources */,
 				456225DC1BF57A4A008202A7 /* RootViewController.m in Sources */,
+				454B36EA1BFEB4DA00FA085C /* UIView+PFObjC.m in Sources */,
+				454B36F71BFEB4EF00FA085C /* PFQRCode.m in Sources */,
+				454B36F81BFEB4EF00FA085C /* PFScanner.m in Sources */,
 				456225B91BF579F9008202A7 /* main.m in Sources */,
 				456225E11BF57B4E008202A7 /* RootModel.m in Sources */,
-				45FCA1721BFE191700EC63E7 /* PFTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

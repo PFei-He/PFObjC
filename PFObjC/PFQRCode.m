@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.6
+//  vesion: 0.0.7
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -90,20 +90,20 @@
         UIImage *iconImage = [UIImage imageNamed:name];
         
         //获取二维码的尺寸
-        CGRect rect = CGRectMake(0,
-                                 0,
-                                 [UIImage imageWithCIImage:[filter.outputImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)]].size.width,
-                                 [UIImage imageWithCIImage:[filter.outputImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)]].size.height);
+        CGSize size1 = [UIImage imageWithCIImage:[filter.outputImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)]].size;
+        
+        //获取二维码的标尺
+        CGRect rect = CGRectMake(0, 0, size1.width, size1.height);
         
         //开始绘图
         UIGraphicsBeginImageContext(rect.size);
         
         //将定制图绘制于二维码中间
         [QRCode drawInRect:rect];
-        CGSize size = CGSizeMake(rect.size.width * 0.25, rect.size.height * 0.25);
-        CGFloat x = (rect.size.width - size.width) * 0.5;
-        CGFloat y = (rect.size.height - size.height) * 0.5;
-        [iconImage drawInRect:CGRectMake(x, y, size.width, size.height)];
+        CGSize size2 = CGSizeMake(rect.size.width * 0.25, rect.size.height * 0.25);
+        CGFloat x = (rect.size.width - size2.width) * 0.5;
+        CGFloat y = (rect.size.height - size2.height) * 0.5;
+        [iconImage drawInRect:CGRectMake(x, y, size2.width, size2.height)];
         
         //生成带图标的二维码
         UIImage *iconQRCode = UIGraphicsGetImageFromCurrentImageContext();
