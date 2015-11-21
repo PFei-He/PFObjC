@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+    <meeting addr="203">
+        <creator>张一</creator>
+        <member>
+            <name>张二</name>
+            <age>20</age>
+        </member>
+        <member>
+            <name>张三</name>
+            <age>21</age>
+        </member>
+        <member>
+            <name>张四</name>
+            <age>22</age>
+        </member>
+    </meeting>
+	
+    <meeting addr="204">
+        <creator>李一</creator>
+        <member>
+            <name>李二</name>
+            <age>20</age>
+        </member>
+        <member>
+            <name>李三</name>
+            <age>21</age>
+        </member>
+        <member>
+            <name>李四</name>
+            <age>22</age>
+        </member>
+    </meeting>
+</result>

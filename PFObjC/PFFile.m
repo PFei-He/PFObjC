@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.7
+//  vesion: 0.0.8
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -37,7 +37,7 @@
 //创建文件
 + (void)createFile:(NSString *)fileName
 {
-    NSString *path = [PFFile pathWithFileName:fileName];
+    NSString *path = [PFFile readFile:fileName directory:@"doucument" type:nil];
     NSFileManager *manager = [NSFileManager defaultManager];
     if (![manager fileExistsAtPath:path]) {//如果文件不存在则创建文件
         [manager createFileAtPath:path contents:nil attributes:nil];
@@ -45,31 +45,40 @@
 }
 
 //读取文件
-+ (NSDictionary *)readFile:(NSString *)fileName
++ (NSData *)readFile:(NSString *)fileName
 {
-    return [[NSDictionary alloc] initWithContentsOfFile:[PFFile pathWithFileName:fileName]];
+    return [[NSData alloc] initWithContentsOfFile:[PFFile readFile:fileName directory:@"doucument" type:nil]];
 }
 
 //读取JSON文件
-+ (NSDictionary *)readJSON:(NSString *)fileName
++ (NSData *)readJSON:(NSString *)fileName
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
-    NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-    return [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+    return [PFFile readFile:fileName directory:@"bundle" type:@"json"];
+}
+
+//读取XML文件
++ (NSData *)readXML:(NSString *)fileName
+{
+    return [PFFile readFile:fileName directory:@"bundle" type:@"xml"];
 }
 
 //写入文件
 + (BOOL)writeToFile:(NSString *)fileName params:(NSDictionary *)params
 {
-    return [params writeToFile:[PFFile pathWithFileName:fileName] atomically:YES];
+    return [params writeToFile:[PFFile readFile:fileName directory:@"document" type:nil] atomically:YES];
 }
 
-///文件路径
-+ (NSString *)pathWithFileName:(NSString *)fileName
+///读取资源包文件或沙盒文件
++ (id)readFile:(NSString *)fileName directory:(NSString *)directory type:(NSString *)type
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    return [paths[0] stringByAppendingPathComponent:fileName];
+    if ([directory isEqualToString:@"bundle"]) {//资源包文件
+        NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:type];
+        NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        return [string dataUsingEncoding:NSUTF8StringEncoding];
+    } else {//沙盒文件
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        return [paths[0] stringByAppendingPathComponent:fileName];
+    }
 }
 
 @end

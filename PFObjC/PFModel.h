@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.7
+//  vesion: 0.0.8
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** JSON模型基类 *****
+//  ***** 数据模型基类 *****
 //
 
 #import <Foundation/Foundation.h>
@@ -37,6 +37,9 @@
 ///JSON数据
 @property (strong, nonatomic) id JSON;
 
+///XML数据
+@property (strong, nonatomic) id XML;
+
 /**
  *  @brief 初始化
  *  @note 无
@@ -44,5 +47,13 @@
  *  @return Model实例
  */
 - (instancetype)initWithJSON:(id)JSON;
+
+/**
+ *  @brief 初始化
+ *  @note 无
+ *  @param XML: XML数据
+ *  @return Model实例
+ */
+- (instancetype)initWithXML:(id)XML;
 
 @end

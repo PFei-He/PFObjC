@@ -9,7 +9,7 @@
 
 版本
 ---
-0.0.7
+0.0.8
 
 说明
 ---
@@ -20,7 +20,7 @@
 
 #### Framework
 * `PFFile` - 实现文件生成和读写功能
-* `PFModel` - JSON模型的基类
+* `PFModel` - 数据模型基类
 * `PFQRCode` - 利用AVFoundation框架生成二维码
 * `PFScanner` - 扫描器
 * `PFTime` - 实现时间获取和转换功能
