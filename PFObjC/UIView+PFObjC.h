@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.8
+//  vesion: 0.0.9
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -36,33 +36,47 @@
 
 ///坐标
 @property (assign, nonatomic)   CGPoint     origin;
+
 ///X坐标
 @property (assign, nonatomic)   CGFloat     x;
+
 ///Y坐标
 @property (assign, nonatomic)   CGFloat     y;
+
 ///尺寸
 @property (assign, nonatomic)   CGSize      size;
+
 ///宽
 @property (assign, nonatomic)   CGFloat     width;
+
 ///高
 @property (assign, nonatomic)   CGFloat     height;
+
+///方位
+@property (assign, nonatomic)   CGPoint     position;
+
 ///上边缘
 @property (assign, nonatomic)   CGFloat     top;
+
 ///左边缘
 @property (assign, nonatomic)   CGFloat     left;
+
 ///下边缘
 @property (assign, nonatomic)   CGFloat     bottom;
+
 ///右边缘
 @property (assign, nonatomic)   CGFloat     right;
+
 ///中心点
 @property (readonly, nonatomic) CGPoint     boundsCenter;
+
 ///中心点的X坐标
 @property (assign, nonatomic)   CGFloat     centerX;
+
 ///中心点的Y坐标
 @property (assign, nonatomic)   CGFloat     centerY;
-///
+
+///位移
 @property (assign, nonatomic)   CGPoint     offset;
-///
-@property (assign, nonatomic)   CGPoint     position;
 
 @end

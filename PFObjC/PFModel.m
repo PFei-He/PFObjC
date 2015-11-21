@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.8
+//  vesion: 0.0.9
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -122,7 +122,7 @@
 //获取未被声明的对象
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    NSLog(@"**Class->%@ UndefinedKey->%@ Type->%@ Value->%@**", [self classForCoder], key, [value classForCoder], value);
+    NSLog(@"***Class->%@ UndefinedKey->%@ Type->%@ Value->%@***", [self classForCoder], key, [value classForCoder], value);
 }
 
 #pragma mark - NSXMLParserDelegate Methods
@@ -137,6 +137,7 @@
     NSMutableDictionary *childDict = [NSMutableDictionary dictionary];
     [childDict addEntriesFromDictionary:attributeDict];
     
+    //将节点转为字典的值
     id value = parentDict[elementName];
     if (value) {
         NSMutableArray *array = nil;

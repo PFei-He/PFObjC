@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.8
+//  vesion: 0.0.9
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,7 @@
 
 @implementation UIView (Metrics)
 
-#pragma mark -
+#pragma mark - ORIGIN
 
 //坐标
 - (CGPoint)origin
@@ -78,7 +78,7 @@
     self.frame = frame;
 }
 
-#pragma mark -
+#pragma mark - SIZE
 
 //尺寸
 - (CGSize)size
@@ -122,7 +122,21 @@
     self.frame = frame;
 }
 
-#pragma mark -
+#pragma mark - POSITION
+
+//方位
+- (CGPoint)position
+{
+    return self.frame.origin;
+}
+
+//方位
+- (void)setPosition:(CGPoint)position
+{
+    CGRect frame = self.frame;
+    frame.origin = position;
+    self.frame = frame;
+}
 
 //上边缘
 - (CGFloat)top
@@ -180,7 +194,7 @@
     self.frame = frame;
 }
 
-#pragma mark -
+#pragma mark - CENTER
 
 //中心点
 - (CGPoint)boundsCenter
@@ -216,9 +230,9 @@
     self.center = center;
 }
 
-#pragma mark -
+#pragma mark - OFFSET
 
-//
+//位移
 - (CGPoint)offset
 {
     CGPoint point = CGPointZero;
@@ -233,7 +247,7 @@
     return point;
 }
 
-//
+//位移
 - (void)setOffset:(CGPoint)offset
 {
     UIView * view = self;
@@ -250,20 +264,6 @@
     
     CGRect frame = self.frame;
     frame.origin = point;
-    self.frame = frame;
-}
-
-//
-- (CGPoint)position
-{
-    return self.frame.origin;
-}
-
-//
-- (void)setPosition:(CGPoint)position
-{
-    CGRect frame = self.frame;
-    frame.origin = position;
     self.frame = frame;
 }
 
