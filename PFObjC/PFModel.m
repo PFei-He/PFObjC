@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.9
+//  vesion: 0.1.0
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -31,6 +31,7 @@
 //
 
 #import "PFModel.h"
+#import <objc/runtime.h>
 
 @interface PFModel () <NSXMLParserDelegate>
 
@@ -119,10 +120,41 @@
     }
 }
 
-//获取未被声明的对象
+#pragma mark - Public Methods
+
+//获取未被声明的键值
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
     NSLog(@"***Class->%@ UndefinedKey->%@ Type->%@ Value->%@***", [self classForCoder], key, [value classForCoder], value);
+}
+
+//创建JSON（将键值转化为字典）
+- (NSDictionary *)createJSON
+{
+    //获取属性列表
+    unsigned int count = 0;
+    Ivar *list = class_copyIvarList([self classForCoder], &count);
+    NSMutableArray *array = [NSMutableArray array];
+    if (list != NULL) {
+        for (int i = 0; i < count; i++) {
+            
+            //获取属性名
+            NSString *key = [NSString stringWithUTF8String:ivar_getName(list[i])];
+            
+            //去掉下划线
+            if ([key hasPrefix:@"_"]) {
+                key = [key substringFromIndex:1];
+            }
+            
+            //将属性放入到数组中
+            [array addObject:key];
+        }
+    }
+    
+    //释放对象
+    free(list);
+    
+    return [self dictionaryWithValuesForKeys:array];
 }
 
 #pragma mark - NSXMLParserDelegate Methods
@@ -137,7 +169,7 @@
     NSMutableDictionary *childDict = [NSMutableDictionary dictionary];
     [childDict addEntriesFromDictionary:attributeDict];
     
-    //将节点转为字典的值
+    //将节点转为字典的键值
     id value = parentDict[elementName];
     if (value) {
         NSMutableArray *array = nil;
@@ -162,7 +194,7 @@
     
     if (self.string.length > 0) {//剪切字符串，去掉空白和换行
         NSString *string = [self.string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        [dictionary setObject:[string mutableCopy] forKey:elementName];
+        [dictionary setObject:string forKey:elementName];
         self.string = [NSMutableString new];
     }
     [self.array removeLastObject];

@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.0.9
+//  vesion: 0.1.0
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -55,5 +55,13 @@
  *  @return Model实例
  */
 - (instancetype)initWithXML:(id)XML;
+
+/**
+ *  @brief 创建JSON
+ *  @note 将键值转化为字典
+ *  @param 无
+ *  @return 转化后JSON数据
+ */
+- (NSDictionary *)createJSON;
 
 @end
