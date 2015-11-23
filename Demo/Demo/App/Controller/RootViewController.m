@@ -40,11 +40,7 @@
 {
     [super viewDidLoad];
     
-    //取出JSON中的对象参数
-    Food *food = [[Food alloc] initWithJSON:[Person sharedInstance].food];
-    Fruits *fruits = [[Fruits alloc] initWithJSON:food.fruit[0]];
-    NSLog(@"%@", fruits.fruit);
-    
+    //生成二维码
     self.imageView.image = [PFQRCode createWithString:[Person sharedInstance].code codeSize:self.imageView.width iconNamed:@"Custom Figure.jpg"];
 }
 
