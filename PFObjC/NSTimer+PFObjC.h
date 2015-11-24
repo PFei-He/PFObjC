@@ -1,8 +1,8 @@
 //
-//  PFScanner.h
+//  NSTimer+PFObjC.h
 //  PFObjC
 //
-//  Created by PFei_He on 15/11/17.
+//  Created by PFei_He on 15/11/24.
 //  Copyright © 2015年 PF-Lib. All rights reserved.
 //
 //  https://github.com/PFei-He/PFObjC
@@ -27,39 +27,35 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** 扫描器 *****
+//  ***** NSTimer类目 *****
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@class PFScanner;
-
-@protocol PFScannerDelegate <NSObject>
+@interface NSTimer (PFObjC)
 
 /**
- *  @brief 扫描完成
+ *  @brief 暂停计时器
  *  @note 无
- *  @param string: 扫描结果转换成的字符串
+ *  @param 无
  *  @return 无
  */
-- (void)scanner:(PFScanner *)scanner scanCompletedWithString:(NSString *)string;
-
-@end
-
-@interface PFScanner : NSObject
-
-/* 详见AVCaptureOutput类的rectOfInterest */
-///扫描器的工作区域
-@property (assign, nonatomic)   CGRect                  rectOfInterest;
-///代理
-@property (weak, nonatomic)     id<PFScannerDelegate>   delegate;
+- (void)pause;
 
 /**
- *  @brief 创建扫描器
+ *  @brief 恢复计时器
  *  @note 无
- *  @param view: 添加扫描器的视图
+ *  @param 无
  *  @return 无
  */
-- (void)createInView:(UIView *)view;
+- (void)resume;
+
+/**
+ *  @brief 指定时间间隔后恢复计时器
+ *  @note 无
+ *  @param timeInterval: 时间间隔
+ *  @return 无
+ */
+- (void)resumeAfterTimeInterval:(NSTimeInterval)timeInterval;
 
 @end

@@ -9,13 +9,14 @@
 
 版本
 ---
-0.1.0
+0.1.1
 
 说明
 ---
 #### Catagory
 * `NSDate+PFObjC` - NSDate类目
 * `NSString+PFObjC` - NSString类目
+* `NSTimer+PFObjC` - NSTimer类目
 * `UIView+PFObjC` - UIView类目
 
 #### Framework

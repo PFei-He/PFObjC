@@ -23,6 +23,7 @@
 		456225DC1BF57A4A008202A7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 456225DB1BF57A4A008202A7 /* RootViewController.m */; };
 		456225E11BF57B4E008202A7 /* RootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 456225E01BF57B4E008202A7 /* RootModel.m */; };
 		456788261BFC97200034EB18 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 456788251BFC97200034EB18 /* person.json */; };
+		4575791E1C040A76004BC1B6 /* NSTimer+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4575791D1C040A76004BC1B6 /* NSTimer+PFObjC.m */; };
 		457B57931C006AE50033B62A /* person.xml in Resources */ = {isa = PBXBuildFile; fileRef = 457B57921C006AE50033B62A /* person.xml */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		456225E01BF57B4E008202A7 /* RootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootModel.m; sourceTree = "<group>"; };
 		456225E21BF57B8A008202A7 /* Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		456788251BFC97200034EB18 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
+		4575791C1C040A76004BC1B6 /* NSTimer+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+PFObjC.h"; sourceTree = "<group>"; };
+		4575791D1C040A76004BC1B6 /* NSTimer+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+PFObjC.m"; sourceTree = "<group>"; };
 		457B57921C006AE50033B62A /* person.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +99,8 @@
 				454B36E31BFEB4DA00FA085C /* NSDate+PFObjC.m */,
 				454B36E41BFEB4DA00FA085C /* NSString+PFObjC.h */,
 				454B36E51BFEB4DA00FA085C /* NSString+PFObjC.m */,
+				4575791C1C040A76004BC1B6 /* NSTimer+PFObjC.h */,
+				4575791D1C040A76004BC1B6 /* NSTimer+PFObjC.m */,
 				454B36E61BFEB4DA00FA085C /* UIView+PFObjC.h */,
 				454B36E71BFEB4DA00FA085C /* UIView+PFObjC.m */,
 			);
@@ -287,6 +292,7 @@
 				456225BC1BF579F9008202A7 /* AppDelegate.m in Sources */,
 				456225DC1BF57A4A008202A7 /* RootViewController.m in Sources */,
 				454B36EA1BFEB4DA00FA085C /* UIView+PFObjC.m in Sources */,
+				4575791E1C040A76004BC1B6 /* NSTimer+PFObjC.m in Sources */,
 				454B36F71BFEB4EF00FA085C /* PFQRCode.m in Sources */,
 				454B36F81BFEB4EF00FA085C /* PFScanner.m in Sources */,
 				456225B91BF579F9008202A7 /* main.m in Sources */,

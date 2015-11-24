@@ -1,8 +1,8 @@
 //
-//  PFScanner.h
+//  NSTimer+PFObjC.m
 //  PFObjC
 //
-//  Created by PFei_He on 15/11/17.
+//  Created by PFei_He on 15/11/24.
 //  Copyright © 2015年 PF-Lib. All rights reserved.
 //
 //  https://github.com/PFei-He/PFObjC
@@ -27,39 +27,41 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** 扫描器 *****
+//  ***** NSTimer类目 *****
 //
 
-#import <UIKit/UIKit.h>
+#import "NSTimer+PFObjC.h"
 
-@class PFScanner;
+@implementation NSTimer (PFObjC)
 
-@protocol PFScannerDelegate <NSObject>
+//暂停计时器
+- (void)pause
+{
+    //若计时器无效则返回
+    if (![self isValid]) return;
+    
+    //设置计时器运行时间为未来时间，则暂停了计时器
+    self.fireDate = [NSDate distantFuture];
+}
 
-/**
- *  @brief 扫描完成
- *  @note 无
- *  @param string: 扫描结果转换成的字符串
- *  @return 无
- */
-- (void)scanner:(PFScanner *)scanner scanCompletedWithString:(NSString *)string;
+//恢复计时器
+- (void)resume
+{
+    //假如计时器无效则返回
+    if (![self isValid]) return;
+    
+    //设置计时器运行时间为当前时间，则立即运行计时器
+    self.fireDate = [NSDate date];
+}
 
-@end
-
-@interface PFScanner : NSObject
-
-/* 详见AVCaptureOutput类的rectOfInterest */
-///扫描器的工作区域
-@property (assign, nonatomic)   CGRect                  rectOfInterest;
-///代理
-@property (weak, nonatomic)     id<PFScannerDelegate>   delegate;
-
-/**
- *  @brief 创建扫描器
- *  @note 无
- *  @param view: 添加扫描器的视图
- *  @return 无
- */
-- (void)createInView:(UIView *)view;
+//指定时间间隔后恢复计时器
+- (void)resumeAfterTimeInterval:(NSTimeInterval)timeInterval
+{
+    //假如计时器无效则返回
+    if (![self isValid]) return;
+    
+    //设置计时器运行时间为指定的间隔时长
+    self.fireDate = [NSDate dateWithTimeIntervalSinceNow:timeInterval];
+}
 
 @end
