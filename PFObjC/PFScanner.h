@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.1
+//  vesion: 0.1.2
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -42,7 +42,7 @@
  *  @param string: 扫描结果转换成的字符串
  *  @return 无
  */
-- (void)scanner:(PFScanner *)scanner scanCompletedWithString:(NSString *)string;
+- (void)scanner:(PFScanner *)scanner captureCompletedWithString:(NSString *)string;
 
 @end
 
