@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.2
+//  vesion: 0.1.3
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -43,15 +43,23 @@
 + (void)createFile:(NSString *)fileName;
 
 /**
- *  @brief 读取文件
+ *  @brief 读取Dictionary类型文件
  *  @note 文件存放于沙盒中的Documents文件夹中
  *  @param fileName: 文件名
  *  @return 文件中的数据
  */
-+ (NSData *)readFile:(NSString *)fileName;
++ (NSDictionary *)readDictionary:(NSString *)fileName;
 
 /**
- *  @brief 读取JSON文件
+ *  @brief 读取String类型文件
+ *  @note 文件存放于沙盒中的Documents文件夹中
+ *  @param fileName: 文件名
+ *  @return 文件中的数据
+ */
++ (NSString *)readString:(NSString *)fileName;
+
+/**
+ *  @brief 读取JSON类型文件
  *  @note 文件存放于main bundle中
  *  @param fileName: 文件名
  *  @return 文件中的数据
@@ -59,7 +67,7 @@
 + (NSData *)readJSON:(NSString *)fileName;
 
 /**
- *  @brief 读取XML文件
+ *  @brief 读取XML类型文件
  *  @note 文件存放于main bundle中
  *  @param fileName: 文件名
  *  @return 文件中的数据

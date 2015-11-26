@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.2
+//  vesion: 0.1.3
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -44,19 +44,25 @@
     }
 }
 
-//读取文件
-+ (NSData *)readFile:(NSString *)fileName
+//读取Dictionary类型文件
++ (NSDictionary *)readDictionary:(NSString *)fileName
 {
-    return [[NSData alloc] initWithContentsOfFile:[PFFile readFile:fileName directory:@"doucument" type:nil]];
+    return [[NSDictionary alloc] initWithContentsOfFile:[PFFile readFile:fileName directory:@"doucument" type:nil]];
 }
 
-//读取JSON文件
+//读取String类型文件
++ (NSString *)readString:(NSString *)fileName
+{
+    return [[NSString alloc] initWithContentsOfFile:[PFFile readFile:fileName directory:@"doucument" type:nil] encoding:NSUTF8StringEncoding error:nil];
+}
+
+//读取JSON类型文件
 + (NSData *)readJSON:(NSString *)fileName
 {
     return [PFFile readFile:fileName directory:@"bundle" type:@"json"];
 }
 
-//读取XML文件
+//读取XML类型文件
 + (NSData *)readXML:(NSString *)fileName
 {
     return [PFFile readFile:fileName directory:@"bundle" type:@"xml"];
