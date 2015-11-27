@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.3
+//  vesion: 0.1.4
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -40,7 +40,7 @@
  *  @param fileName: 文件名
  *  @return 无
  */
-+ (void)createFile:(NSString *)fileName;
++ (void)createFileWithName:(NSString *)fileName;
 
 /**
  *  @brief 读取Dictionary类型文件
@@ -48,7 +48,7 @@
  *  @param fileName: 文件名
  *  @return 文件中的数据
  */
-+ (NSDictionary *)readDictionary:(NSString *)fileName;
++ (NSDictionary *)readDictionaryWithName:(NSString *)fileName;
 
 /**
  *  @brief 读取String类型文件
@@ -56,7 +56,7 @@
  *  @param fileName: 文件名
  *  @return 文件中的数据
  */
-+ (NSString *)readString:(NSString *)fileName;
++ (NSString *)readStringWithName:(NSString *)fileName;
 
 /**
  *  @brief 读取JSON类型文件
@@ -64,7 +64,7 @@
  *  @param fileName: 文件名
  *  @return 文件中的数据
  */
-+ (NSData *)readJSON:(NSString *)fileName;
++ (NSData *)readJSONWithName:(NSString *)fileName;
 
 /**
  *  @brief 读取XML类型文件
@@ -72,7 +72,7 @@
  *  @param fileName: 文件名
  *  @return 文件中的数据
  */
-+ (NSData *)readXML:(NSString *)fileName;
++ (NSData *)readXMLWithName:(NSString *)fileName;
 
 /**
  *  @brief 写入文件
@@ -81,6 +81,15 @@
  *  @param params: 写入文件的参数
  *  @return 写入结果
  */
-+ (BOOL)writeToFile:(NSString *)fileName params:(NSDictionary *)params;
++ (BOOL)writeToFileWithName:(NSString *)fileName params:(NSDictionary *)params;
+
+/**
+ *  @brief 往文件中添加参数
+ *  @note 文件存放于沙盒中的Documents文件夹中
+ *  @param fileName: 文件名
+ *  @param params: 写入文件的参数
+ *  @return 写入结果
+ */
++ (BOOL)fileWithName:(NSString *)fileName setParams:(NSDictionary *)params;
 
 @end

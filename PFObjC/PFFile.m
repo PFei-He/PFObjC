@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.3
+//  vesion: 0.1.4
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -35,9 +35,9 @@
 @implementation PFFile
 
 //创建文件
-+ (void)createFile:(NSString *)fileName
++ (void)createFileWithName:(NSString *)fileName
 {
-    NSString *path = [PFFile readFile:fileName directory:@"doucument" type:nil];
+    NSString *path = [PFFile readFileWithName:fileName directory:@"doucument" type:nil];
     NSFileManager *manager = [NSFileManager defaultManager];
     if (![manager fileExistsAtPath:path]) {//如果文件不存在则创建文件
         [manager createFileAtPath:path contents:nil attributes:nil];
@@ -45,37 +45,45 @@
 }
 
 //读取Dictionary类型文件
-+ (NSDictionary *)readDictionary:(NSString *)fileName
++ (NSDictionary *)readDictionaryWithName:(NSString *)fileName
 {
-    return [[NSDictionary alloc] initWithContentsOfFile:[PFFile readFile:fileName directory:@"doucument" type:nil]];
+    return [[NSDictionary alloc] initWithContentsOfFile:[PFFile readFileWithName:fileName directory:@"doucument" type:nil]];
 }
 
 //读取String类型文件
-+ (NSString *)readString:(NSString *)fileName
++ (NSString *)readStringWithName:(NSString *)fileName
 {
-    return [[NSString alloc] initWithContentsOfFile:[PFFile readFile:fileName directory:@"doucument" type:nil] encoding:NSUTF8StringEncoding error:nil];
+    return [[NSString alloc] initWithContentsOfFile:[PFFile readFileWithName:fileName directory:@"doucument" type:nil] encoding:NSUTF8StringEncoding error:nil];
 }
 
 //读取JSON类型文件
-+ (NSData *)readJSON:(NSString *)fileName
++ (NSData *)readJSONWithName:(NSString *)fileName
 {
-    return [PFFile readFile:fileName directory:@"bundle" type:@"json"];
+    return [PFFile readFileWithName:fileName directory:@"bundle" type:@"json"];
 }
 
 //读取XML类型文件
-+ (NSData *)readXML:(NSString *)fileName
++ (NSData *)readXMLWithName:(NSString *)fileName
 {
-    return [PFFile readFile:fileName directory:@"bundle" type:@"xml"];
+    return [PFFile readFileWithName:fileName directory:@"bundle" type:@"xml"];
 }
 
 //写入文件
-+ (BOOL)writeToFile:(NSString *)fileName params:(NSDictionary *)params
++ (BOOL)writeToFileWithName:(NSString *)fileName params:(NSDictionary *)params
 {
-    return [params writeToFile:[PFFile readFile:fileName directory:@"document" type:nil] atomically:YES];
+    return [params writeToFile:[PFFile readFileWithName:fileName directory:@"document" type:nil] atomically:YES];
+}
+
+//往文件中添加参数
++ (BOOL)fileWithName:(NSString *)fileName setParams:(NSDictionary *)params
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary:[PFFile readDictionaryWithName:fileName]];
+    [dictionary addEntriesFromDictionary:params];
+    return [PFFile writeToFileWithName:fileName params:dictionary];
 }
 
 ///读取资源包文件或沙盒文件
-+ (id)readFile:(NSString *)fileName directory:(NSString *)directory type:(NSString *)type
++ (id)readFileWithName:(NSString *)fileName directory:(NSString *)directory type:(NSString *)type
 {
     if ([directory isEqualToString:@"bundle"]) {//资源包文件
         NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:type];
