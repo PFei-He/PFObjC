@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.4
+//  vesion: 0.1.5
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -75,6 +75,14 @@
 + (NSData *)readXMLWithName:(NSString *)fileName;
 
 /**
+ *  @brief 读取文件的路径
+ *  @note 文件存放于沙盒中的Documents文件夹中
+ *  @param fileName: 文件名
+ *  @return 文件路径
+ */
++ (NSString *)readPathWithName:(NSString *)fileName;
+
+/**
  *  @brief 写入文件
  *  @note 文件存放于沙盒中的Documents文件夹中
  *  @param fileName: 文件名
@@ -91,5 +99,13 @@
  *  @return 写入结果
  */
 + (BOOL)fileWithName:(NSString *)fileName setParams:(NSDictionary *)params;
+
+/**
+ *  @brief 删除文件
+ *  @note 文件存放于沙盒中的Documents文件夹中
+ *  @param fileName: 文件名
+ *  @return 无
+ */
++ (void)removeFileWithName:(NSString *)fileName;
 
 @end

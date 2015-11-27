@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.4
+//  vesion: 0.1.5
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -68,6 +68,12 @@
     return [PFFile readFileWithName:fileName directory:@"bundle" type:@"xml"];
 }
 
+//读取文件的路径
++ (NSString *)readPathWithName:(NSString *)fileName
+{
+    return [PFFile readFileWithName:fileName directory:@"document" type:nil];
+}
+
 //写入文件
 + (BOOL)writeToFileWithName:(NSString *)fileName params:(NSDictionary *)params
 {
@@ -80,6 +86,16 @@
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary:[PFFile readDictionaryWithName:fileName]];
     [dictionary addEntriesFromDictionary:params];
     return [PFFile writeToFileWithName:fileName params:dictionary];
+}
+
+//删除文件
++ (void)removeFileWithName:(NSString *)fileName
+{
+    NSString *path = [PFFile readFileWithName:fileName directory:@"doucument" type:nil];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:path]) {//如果文件存在则删除文件
+        [manager removeItemAtPath:path error:nil];
+    }
 }
 
 ///读取资源包文件或沙盒文件
