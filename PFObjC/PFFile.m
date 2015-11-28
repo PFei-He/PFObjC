@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.5
+//  vesion: 0.1.6
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -75,17 +75,17 @@
 }
 
 //写入文件
-+ (BOOL)writeToFileWithName:(NSString *)fileName params:(NSDictionary *)params
++ (BOOL)fileWithName:(NSString *)fileName setParams:(NSDictionary *)params
 {
     return [params writeToFile:[PFFile readFileWithName:fileName directory:@"document" type:nil] atomically:YES];
 }
 
-//往文件中添加参数
-+ (BOOL)fileWithName:(NSString *)fileName setParams:(NSDictionary *)params
+//添加参数
++ (BOOL)fileWithName:(NSString *)fileName addParams:(NSDictionary *)params
 {
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary:[PFFile readDictionaryWithName:fileName]];
     [dictionary addEntriesFromDictionary:params];
-    return [PFFile writeToFileWithName:fileName params:dictionary];
+    return [PFFile fileWithName:fileName setParams:dictionary];
 }
 
 //删除文件

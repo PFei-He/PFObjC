@@ -9,7 +9,7 @@
 
 版本
 ---
-0.1.5
+0.1.6
 
 说明
 ---
@@ -20,6 +20,7 @@
 * `UIView+PFObjC` - UIView类目
 
 #### Framework
+* `PFConfigure` - 本类库常用宏
 * `PFFile` - 实现文件生成和读写功能
 * `PFModel` - 数据模型基类
 * `PFQRCode` - 利用AVFoundation框架生成二维码
