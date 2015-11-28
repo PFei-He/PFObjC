@@ -39,7 +39,7 @@
     // Override point for customization after application launch.
     
     //从文件中读取JSON
-    [Person sharedInstance].JSON = [PFFile readJSON:@"person"];
+    [Person sharedInstance].JSON = [PFFile readJSONWithName:@"person"];
     
     return YES;
 }

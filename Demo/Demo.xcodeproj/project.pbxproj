@@ -45,6 +45,7 @@
 		454B36F31BFEB4EF00FA085C /* PFTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFTime.h; sourceTree = "<group>"; };
 		454B36F41BFEB4EF00FA085C /* PFTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFTime.m; sourceTree = "<group>"; };
 		454B36FA1BFEB50500FA085C /* PFObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFObjC.h; sourceTree = "<group>"; };
+		454E7B141C097F1C00330DD5 /* PFConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFConfigure.h; sourceTree = "<group>"; };
 		456225B41BF579F9008202A7 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456225B81BF579F9008202A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		456225BA1BF579F9008202A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		454B36E01BFEB4BE00FA085C /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				454E7B141C097F1C00330DD5 /* PFConfigure.h */,
 				454B36EB1BFEB4EF00FA085C /* PFFile.h */,
 				454B36EC1BFEB4EF00FA085C /* PFFile.m */,
 				454B36ED1BFEB4EF00FA085C /* PFModel.h */,
