@@ -36,9 +36,6 @@
          location = "container:"
          name = "Framework">
          <FileRef
-            location = "group:PFObjC/PFConfigure.h">
-         </FileRef>
-         <FileRef
             location = "group:PFObjC/PFFile.h">
          </FileRef>
          <FileRef

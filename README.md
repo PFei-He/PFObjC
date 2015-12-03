@@ -1,3 +1,4 @@
+![logo](https://github.com/PFei-He/PFObjC/blob/master/PFObjC.png)
 [PFObjC](https://github.com/PFei-He/PFObjC)
 ===
 
@@ -9,7 +10,7 @@
 
 版本
 ---
-0.1.6
+0.1.7
 
 说明
 ---

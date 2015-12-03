@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.6
+//  vesion: 0.1.7
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -54,10 +54,26 @@
 }
 
 //初始化
++ (instancetype)modelWithJSON:(id)JSON
+{
+    PFModel *model = [[self alloc] init];
+    model.JSON = JSON;
+    return model;
+}
+
+//初始化
 - (instancetype)initWithXML:(id)XML
 {
     self.XML = XML;
     return [self init];
+}
+
+//初始化
++ (instancetype)modelWithXML:(id)XML
+{
+    PFModel *model = [[self alloc] init];
+    model.XML = XML;
+    return model;
 }
 
 #pragma mark - Property Methods
