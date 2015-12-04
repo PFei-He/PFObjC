@@ -1,8 +1,8 @@
 //
-//  PFObjC.h
+//  UIAlertView+PFObjC.m
 //  PFObjC
 //
-//  Created by PFei_He on 15/11/17.
+//  Created by PFei_He on 15/12/4.
 //  Copyright © 2015年 PF-Lib. All rights reserved.
 //
 //  https://github.com/PFei-He/PFObjC
@@ -27,23 +27,26 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** 类库接口 *****
+//  ***** UIAlertView类目 *****
 //
 
-#ifndef PFObjC_h
-#define PFObjC_h
-
-#import "NSDate+PFObjC.h"
-#import "NSString+PFObjC.h"
-#import "NSTimer+PFObjC.h"
 #import "UIAlertView+PFObjC.h"
-#import "UIView+PFObjC.h"
 
-#import "PFConfigure.h"
-#import "PFFile.h"
-#import "PFModel.h"
-#import "PFQRCode.h"
-#import "PFScanner.h"
-#import "PFTime.h"
+@implementation UIAlertView (PFObjC)
 
-#endif /* PFObjC_h */
+//显示警告
++ (void)showWithTitles:(NSArray *)titles message:(NSString *)message target:(id)target
+{
+    UIAlertView *alertView = [[UIAlertView alloc] init];
+    alertView.title = titles[0];
+    alertView.message = message;
+    alertView.delegate = target;
+    if (titles.count > 1) {
+        for (NSString *string in [titles objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(1, titles.count-1)]]) {
+            [alertView addButtonWithTitle:string];
+        }
+    }
+    [alertView show];
+}
+
+@end

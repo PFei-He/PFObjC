@@ -1,8 +1,8 @@
 //
-//  PFObjC.h
+//  UIAlertView+PFObjC.h
 //  PFObjC
 //
-//  Created by PFei_He on 15/11/17.
+//  Created by PFei_He on 15/12/4.
 //  Copyright © 2015年 PF-Lib. All rights reserved.
 //
 //  https://github.com/PFei-He/PFObjC
@@ -27,23 +27,21 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** 类库接口 *****
+//  ***** UIAlertView类目 *****
 //
 
-#ifndef PFObjC_h
-#define PFObjC_h
+#import <UIKit/UIKit.h>
 
-#import "NSDate+PFObjC.h"
-#import "NSString+PFObjC.h"
-#import "NSTimer+PFObjC.h"
-#import "UIAlertView+PFObjC.h"
-#import "UIView+PFObjC.h"
+@interface UIAlertView (PFObjC)
 
-#import "PFConfigure.h"
-#import "PFFile.h"
-#import "PFModel.h"
-#import "PFQRCode.h"
-#import "PFScanner.h"
-#import "PFTime.h"
+/**
+ *  @brief 显示警告
+ *  @note 无
+ *  @param titles: 所有的标题，第0个为警告的标题，其余为按钮标题
+ *  @param message: 提示内容
+ *  @param target: 执行方法的对象
+ *  @return 无
+ */
++ (void)showWithTitles:(NSArray *)titles message:(NSString *)message target:(id)target;
 
-#endif /* PFObjC_h */
+@end

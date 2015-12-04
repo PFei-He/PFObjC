@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.7
+//  vesion: 0.1.8
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -45,6 +45,12 @@
 @implementation PFModel
 
 #pragma mark - Life Cycle
+
+//初始化
++ (instancetype)model
+{
+    return [[self alloc] init];
+}
 
 //初始化
 - (instancetype)initWithJSON:(id)JSON
@@ -166,7 +172,6 @@
             [array addObject:key];
         }
     }
-    
     //释放对象
     free(list);
     
