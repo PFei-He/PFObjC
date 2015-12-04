@@ -25,6 +25,7 @@
 		456788261BFC97200034EB18 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 456788251BFC97200034EB18 /* person.json */; };
 		4575791E1C040A76004BC1B6 /* NSTimer+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4575791D1C040A76004BC1B6 /* NSTimer+PFObjC.m */; };
 		457B57931C006AE50033B62A /* person.xml in Resources */ = {isa = PBXBuildFile; fileRef = 457B57921C006AE50033B62A /* person.xml */; };
+		45E2992F1C11F23700EDA7A7 /* UIAlertView+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E2992E1C11F23700EDA7A7 /* UIAlertView+PFObjC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,9 @@
 		4575791C1C040A76004BC1B6 /* NSTimer+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+PFObjC.h"; sourceTree = "<group>"; };
 		4575791D1C040A76004BC1B6 /* NSTimer+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+PFObjC.m"; sourceTree = "<group>"; };
 		457B57921C006AE50033B62A /* person.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person.xml; sourceTree = "<group>"; };
+		45E2992D1C11F23700EDA7A7 /* UIAlertView+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+PFObjC.h"; sourceTree = "<group>"; };
+		45E2992E1C11F23700EDA7A7 /* UIAlertView+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+PFObjC.m"; sourceTree = "<group>"; };
+		45E299301C11F26100EDA7A7 /* PFConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFConfigure.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		454B36E01BFEB4BE00FA085C /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				45E299301C11F26100EDA7A7 /* PFConfigure.h */,
 				454B36EB1BFEB4EF00FA085C /* PFFile.h */,
 				454B36EC1BFEB4EF00FA085C /* PFFile.m */,
 				454B36ED1BFEB4EF00FA085C /* PFModel.h */,
@@ -101,6 +106,8 @@
 				454B36E51BFEB4DA00FA085C /* NSString+PFObjC.m */,
 				4575791C1C040A76004BC1B6 /* NSTimer+PFObjC.h */,
 				4575791D1C040A76004BC1B6 /* NSTimer+PFObjC.m */,
+				45E2992D1C11F23700EDA7A7 /* UIAlertView+PFObjC.h */,
+				45E2992E1C11F23700EDA7A7 /* UIAlertView+PFObjC.m */,
 				454B36E61BFEB4DA00FA085C /* UIView+PFObjC.h */,
 				454B36E71BFEB4DA00FA085C /* UIView+PFObjC.m */,
 			);
@@ -295,6 +302,7 @@
 				4575791E1C040A76004BC1B6 /* NSTimer+PFObjC.m in Sources */,
 				454B36F71BFEB4EF00FA085C /* PFQRCode.m in Sources */,
 				454B36F81BFEB4EF00FA085C /* PFScanner.m in Sources */,
+				45E2992F1C11F23700EDA7A7 /* UIAlertView+PFObjC.m in Sources */,
 				456225B91BF579F9008202A7 /* main.m in Sources */,
 				456225E11BF57B4E008202A7 /* RootModel.m in Sources */,
 			);
