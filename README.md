@@ -15,19 +15,19 @@
 说明
 ---
 #### Catagory
-* `NSDate+PFObjC` - NSDate类目
-* `NSString+PFObjC` - NSString类目
-* `NSTimer+PFObjC` - NSTimer类目
-* `UIAlertView+PFObjC` - UIAlertView类目
-* `UIView+PFObjC` - UIView类目
+* `NSDate+PFObjC`       - NSDate类目
+* `NSString+PFObjC`     - NSString类目
+* `NSTimer+PFObjC`      - NSTimer类目
+* `UIAlertView+PFObjC`  - UIAlertView类目
+* `UIView+PFObjC`       - UIView类目
 
 #### Framework
-* `PFConfigure` - 本类库常用宏
-* `PFFile` - 实现文件生成和读写功能
-* `PFModel` - 数据模型基类
-* `PFQRCode` - 利用AVFoundation框架生成二维码
-* `PFScanner` - 扫描器
-* `PFTime` - 实现时间获取和转换功能
+* `PFConfigure`         - 本类库常用宏
+* `PFFile`              - 实现文件生成和读写功能
+* `PFModel`             - 数据模型基类
+* `PFQRCode`            - 利用AVFoundation框架生成二维码
+* `PFScanner`           - 扫描器
+* `PFTime`              - 实现时间获取和转换功能
  
 #### Other
 * `PFObjC.h` - 类库接口
