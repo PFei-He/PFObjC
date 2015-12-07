@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.8
+//  vesion: 0.1.9
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -155,18 +155,12 @@
 {
     //获取属性列表
     unsigned int count = 0;
-    Ivar *list = class_copyIvarList([self classForCoder], &count);
+    objc_property_t *list = class_copyPropertyList([self classForCoder], &count);
     NSMutableArray *array = [NSMutableArray array];
     if (list != NULL) {
         for (int i = 0; i < count; i++) {
-            
             //获取属性名
-            NSString *key = [NSString stringWithUTF8String:ivar_getName(list[i])];
-            
-            //去掉下划线
-            if ([key hasPrefix:@"_"]) {
-                key = [key substringFromIndex:1];
-            }
+            NSString *key = [NSString stringWithUTF8String:property_getName(list[i])];
             
             //将属性放入到数组中
             [array addObject:key];
@@ -175,7 +169,15 @@
     //释放对象
     free(list);
     
-    return [self dictionaryWithValuesForKeys:array];
+    //去除空值
+    NSDictionary *dictionary = [NSDictionary dictionaryWithDictionary:[self dictionaryWithValuesForKeys:array]];
+    NSMutableDictionary *mutableDictionary = [NSMutableDictionary dictionary];
+    for (NSString *string in dictionary) {
+        if ([dictionary[string] isKindOfClass:[NSNull class]]) {
+            [mutableDictionary setObject:@"" forKey:string];
+        }
+    }
+    return mutableDictionary;
 }
 
 #pragma mark - NSXMLParserDelegate Methods
