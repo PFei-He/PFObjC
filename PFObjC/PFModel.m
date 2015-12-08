@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.2.1
+//  vesion: 0.2.2
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,6 @@
 //
 
 #import "PFModel.h"
-#import "PFConfigure.h"
 #import <objc/runtime.h>
 
 @interface PFModel () <NSXMLParserDelegate>
@@ -89,26 +88,14 @@
 - (void)setJSON:(id)JSON
 {
     _JSON = JSON;
-    
-    //解析JSON
-    @weakify_self
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        @strongify_self
-        [self parseJSON:JSON];
-    });
+    [self parseJSON:JSON];
 }
 
 //XML数据
 - (void)setXML:(id)XML
 {
     _XML = XML;
-    
-    //解析XML
-    @weakify_self
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        @strongify_self
-        [self parseXML:XML];
-    });
+    [self parseXML:XML];
 }
 
 #pragma mark - Private Methods
