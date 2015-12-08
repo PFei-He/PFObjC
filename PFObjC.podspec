@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = 'PFObjC'
-  s.version                 = '0.1.9'
+  s.version                 = '0.2.0'
   s.summary                 = '对系统API进行简单封装，实现常用功能'
   s.homepage                = 'https://github.com/PFei-He/PFObjC'
   s.license                 = { :type => 'MIT', :file => 'LICENSE' }

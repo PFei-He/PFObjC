@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.1.9
+//  vesion: 0.2.0
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -171,13 +171,17 @@
     
     //去除空值
     NSDictionary *dictionary = [NSDictionary dictionaryWithDictionary:[self dictionaryWithValuesForKeys:array]];
-    NSMutableDictionary *mutableDictionary = [NSMutableDictionary dictionary];
+    NSMutableDictionary *JSON = [NSMutableDictionary dictionary];
     for (NSString *string in dictionary) {
         if ([dictionary[string] isKindOfClass:[NSNull class]]) {
-            [mutableDictionary setObject:@"" forKey:string];
+            [JSON setObject:@"" forKey:string];
+        } else {
+            [JSON setObject:dictionary[string] forKey:string];
         }
     }
-    return mutableDictionary;
+    
+    //返回JSON对象
+    return JSON;
 }
 
 #pragma mark - NSXMLParserDelegate Methods
