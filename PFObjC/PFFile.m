@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.2.2
+//  vesion: 0.2.3
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -41,6 +41,17 @@
     NSFileManager *manager = [NSFileManager defaultManager];
     if (![manager fileExistsAtPath:path]) {//如果文件不存在则创建文件
         [manager createFileAtPath:path contents:nil attributes:nil];
+    }
+}
+
+//创建文件
++ (void)createFileWithName:(NSString *)fileName params:(NSDictionary *)params
+{
+    NSString *path = [PFFile readFileWithName:fileName directory:@"doucument" type:nil];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if (![manager fileExistsAtPath:path]) {//如果文件不存在则创建文件
+        [manager createFileAtPath:path contents:nil attributes:nil];
+        [PFFile fileWithName:fileName setParams:params];
     }
 }
 

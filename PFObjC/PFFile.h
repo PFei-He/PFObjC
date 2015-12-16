@@ -7,7 +7,7 @@
 //
 //  https://github.com/PFei-He/PFObjC
 //
-//  vesion: 0.2.2
+//  vesion: 0.2.3
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -41,6 +41,15 @@
  *  @return 无
  */
 + (void)createFileWithName:(NSString *)fileName;
+
+/**
+ *  @brief 创建文件
+ *  @note 文件存放于沙盒中的Documents文件夹中
+ *  @param fileName: 文件名
+ *  @param params: 写入的参数
+ *  @return 无
+ */
++ (void)createFileWithName:(NSString *)fileName params:(NSDictionary *)params;
 
 /**
  *  @brief 读取Dictionary类型文件
