@@ -42,7 +42,7 @@
 #### CocoaPods
 ```
 platform:ios, '7.0'
-pod 'PFObjC', '~> 0.2'
+pod 'PFObjC', '~> 0.3'
 ```
 
 使用
