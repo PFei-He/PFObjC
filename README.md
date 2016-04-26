@@ -10,7 +10,7 @@
 
 版本
 ---
-0.3.0
+0.4.0
 
 说明
 ---
@@ -18,7 +18,6 @@
 * `NSDate+PFObjC`       - NSDate类目
 * `NSString+PFObjC`     - NSString类目
 * `NSTimer+PFObjC`      - NSTimer类目
-* `UIAlertView+PFObjC`  - UIAlertView类目
 * `UIView+PFObjC`       - UIView类目
 
 #### Framework

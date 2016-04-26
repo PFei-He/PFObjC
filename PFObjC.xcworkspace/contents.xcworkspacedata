@@ -26,12 +26,6 @@
             location = "group:PFObjC/NSTimer+PFObjC.m">
          </FileRef>
          <FileRef
-            location = "group:PFObjC/UIAlertView+PFObjC.h">
-         </FileRef>
-         <FileRef
-            location = "group:PFObjC/UIAlertView+PFObjC.m">
-         </FileRef>
-         <FileRef
             location = "group:PFObjC/UIView+PFObjC.h">
          </FileRef>
          <FileRef
