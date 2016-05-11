@@ -35,7 +35,7 @@
 //版本号
 + (NSString *)version
 {
-    return "[ PFObjC ] current version: 0.4.1";
+    return @"[ PFObjC ] current version: 0.4.1";
 }
 
 @end
