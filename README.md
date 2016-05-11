@@ -10,7 +10,7 @@
 
 版本
 ---
-0.4.0
+0.4.1
 
 说明
 ---
@@ -19,6 +19,9 @@
 * `NSString+PFObjC`     - NSString类目
 * `NSTimer+PFObjC`      - NSTimer类目
 * `UIView+PFObjC`       - UIView类目
+
+#### Debug
+* `PFObjCDebug`         - 调试
 
 #### Framework
 * `PFConfigure`         - 本类库常用宏

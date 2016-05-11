@@ -34,6 +34,16 @@
       </Group>
       <Group
          location = "container:"
+         name = "Debug">
+         <FileRef
+            location = "group:PFObjC/PFObjCDebug.h">
+         </FileRef>
+         <FileRef
+            location = "group:PFObjC/PFObjCDebug.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
          name = "Framework">
          <FileRef
             location = "group:PFObjC/PFConfigure.h">

@@ -1,9 +1,9 @@
 //
-//  NSTimer+PFObjC.h
+//  PFObjCDebug.h
 //  PFObjC
 //
-//  Created by PFei_He on 15/11/24.
-//  Copyright © 2015年 PF-Lib. All rights reserved.
+//  Created by PFei_He on 16/5/11.
+//  Copyright © 2016年 PF-Lib. All rights reserved.
 //
 //  https://github.com/PFei-He/PFObjC
 //
@@ -25,35 +25,19 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** NSTimer类目 *****
+//  ***** 调试 *****
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSTimer (PFObjC)
+@interface PFObjCDebug : NSObject
 
 /**
- *  @brief 暂停计时器
+ *  @brief 版本号
  *  @note 无
  *  @param 无
- *  @return 无
+ *  @return 版本号
  */
-- (void)pause;
-
-/**
- *  @brief 恢复计时器
- *  @note 无
- *  @param 无
- *  @return 无
- */
-- (void)resume;
-
-/**
- *  @brief 指定时间间隔后恢复计时器
- *  @note 无
- *  @param timeInterval: 时间间隔
- *  @return 无
- */
-- (void)resumeAfterTimeInterval:(NSTimeInterval)timeInterval;
++ (NSString *)version;
 
 @end
