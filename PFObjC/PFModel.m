@@ -103,7 +103,7 @@
 {
     //判断数据类型
     if (![JSON isKindOfClass:[NSDictionary class]] && ![JSON isKindOfClass:[NSData class]]) {
-        NSLog(@"The JSON object must be type of dictionary or data");
+        NSLog(@"[ %@ ][ ERROR ] %@", [self classForCoder], @"The JSON object must be type of dictionary or data");
         return;
     } else if ([JSON isKindOfClass:[NSData class]]) {
         JSON = [NSJSONSerialization JSONObjectWithData:JSON options:NSJSONReadingAllowFragments error:nil];
@@ -124,7 +124,7 @@
     
     //判断数据类型
     if (![XML isKindOfClass:[NSString class]] && ![XML isKindOfClass:[NSData class]]) {
-        NSLog(@"The XML object must be type of string or data");
+        NSLog(@"[ %@ ][ ERROR ] %@", [self classForCoder], @"The XML object must be type of string or data");
         return;
     } else if ([XML isKindOfClass:[NSString class]]) {
         XML = [XML dataUsingEncoding:NSUTF8StringEncoding];
@@ -136,7 +136,7 @@
     if ([parser parse]) {//解析XML
         self.JSON = self.array[0];
     } else {
-        NSLog(@"XML data can't be parse");
+        NSLog(@"[ %@ ][ ERROR ] %@", [self classForCoder], @"XML data can't be parse");
     }
 }
 
@@ -145,7 +145,7 @@
 //获取未被声明的键值
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    NSLog(@"***Class->%@ UndefinedKey->%@ Type->%@ Value->%@***", [self classForCoder], key, [value classForCoder], value);
+    NSLog(@"[ %@ ][ ERROR ] UndefinedKey: %@, Type: %@, Value: %@", [self classForCoder], key, [value classForCoder], value);
 }
 
 //创建JSON（将键值转化为字典）

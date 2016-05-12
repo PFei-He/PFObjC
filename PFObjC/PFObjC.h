@@ -2,8 +2,8 @@
 //  PFObjC.h
 //  PFObjC
 //
-//  Created by PFei_He on 15/11/17.
-//  Copyright © 2015年 PF-Lib. All rights reserved.
+//  Created by PFei_He on 16/5/12.
+//  Copyright © 2016年 PF-Lib. All rights reserved.
 //
 //  https://github.com/PFei-He/PFObjC
 //
@@ -25,7 +25,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** 类库接口 *****
+//  ***** 类库接口与调试 *****
 //
 
 #ifndef PFObjC_h
@@ -36,8 +36,6 @@
 #import "NSTimer+PFObjC.h"
 #import "UIView+PFObjC.h"
 
-#import "PFObjCDebug.h"
-
 #import "PFConfigure.h"
 #import "PFFile.h"
 #import "PFModel.h"
@@ -46,3 +44,17 @@
 #import "PFTime.h"
 
 #endif /* PFObjC_h */
+
+#import <Foundation/Foundation.h>
+
+@interface PFObjC : NSObject
+
+/**
+ *  @brief 版本号
+ *  @note 无
+ *  @param 无
+ *  @return 版本号
+ */
++ (NSString *)debugVersion;
+
+@end

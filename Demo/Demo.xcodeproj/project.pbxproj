@@ -22,10 +22,10 @@
 		456225D91BF57A33008202A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456225D51BF57A33008202A7 /* Main.storyboard */; };
 		456225DC1BF57A4A008202A7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 456225DB1BF57A4A008202A7 /* RootViewController.m */; };
 		456225E11BF57B4E008202A7 /* RootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 456225E01BF57B4E008202A7 /* RootModel.m */; };
+		4565F5081CE41EA100AA978E /* PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4565F5071CE41EA100AA978E /* PFObjC.m */; };
 		456788261BFC97200034EB18 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 456788251BFC97200034EB18 /* person.json */; };
 		4575791E1C040A76004BC1B6 /* NSTimer+PFObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4575791D1C040A76004BC1B6 /* NSTimer+PFObjC.m */; };
 		457B57931C006AE50033B62A /* person.xml in Resources */ = {isa = PBXBuildFile; fileRef = 457B57921C006AE50033B62A /* person.xml */; };
-		459B9D911CE3309E001FCFFA /* PFObjCDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 459B9D901CE3309E001FCFFA /* PFObjCDebug.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,12 +59,11 @@
 		456225DF1BF57B4E008202A7 /* RootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootModel.h; sourceTree = "<group>"; };
 		456225E01BF57B4E008202A7 /* RootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootModel.m; sourceTree = "<group>"; };
 		456225E21BF57B8A008202A7 /* Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
+		4565F5071CE41EA100AA978E /* PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFObjC.m; sourceTree = "<group>"; };
 		456788251BFC97200034EB18 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
 		4575791C1C040A76004BC1B6 /* NSTimer+PFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+PFObjC.h"; sourceTree = "<group>"; };
 		4575791D1C040A76004BC1B6 /* NSTimer+PFObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+PFObjC.m"; sourceTree = "<group>"; };
 		457B57921C006AE50033B62A /* person.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = person.xml; sourceTree = "<group>"; };
-		459B9D8F1CE3309E001FCFFA /* PFObjCDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFObjCDebug.h; sourceTree = "<group>"; };
-		459B9D901CE3309E001FCFFA /* PFObjCDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFObjCDebug.m; sourceTree = "<group>"; };
 		45E299301C11F26100EDA7A7 /* PFConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFConfigure.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,22 +205,13 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		459B9D8E1CE33081001FCFFA /* Debug */ = {
-			isa = PBXGroup;
-			children = (
-				459B9D8F1CE3309E001FCFFA /* PFObjCDebug.h */,
-				459B9D901CE3309E001FCFFA /* PFObjCDebug.m */,
-			);
-			name = Debug;
-			sourceTree = "<group>";
-		};
 		45FCA15A1BFE191700EC63E7 /* PFObjC */ = {
 			isa = PBXGroup;
 			children = (
 				454B36E11BFEB4C500FA085C /* Catagory */,
-				459B9D8E1CE33081001FCFFA /* Debug */,
 				454B36E01BFEB4BE00FA085C /* Framework */,
 				454B36FA1BFEB50500FA085C /* PFObjC.h */,
+				4565F5071CE41EA100AA978E /* PFObjC.m */,
 			);
 			name = PFObjC;
 			path = ../../../PFObjC;
@@ -302,11 +292,11 @@
 				454B36E81BFEB4DA00FA085C /* NSDate+PFObjC.m in Sources */,
 				454B36F61BFEB4EF00FA085C /* PFModel.m in Sources */,
 				454B36F51BFEB4EF00FA085C /* PFFile.m in Sources */,
+				4565F5081CE41EA100AA978E /* PFObjC.m in Sources */,
 				454B36E91BFEB4DA00FA085C /* NSString+PFObjC.m in Sources */,
 				454B36F91BFEB4EF00FA085C /* PFTime.m in Sources */,
 				456225BC1BF579F9008202A7 /* AppDelegate.m in Sources */,
 				456225DC1BF57A4A008202A7 /* RootViewController.m in Sources */,
-				459B9D911CE3309E001FCFFA /* PFObjCDebug.m in Sources */,
 				454B36EA1BFEB4DA00FA085C /* UIView+PFObjC.m in Sources */,
 				4575791E1C040A76004BC1B6 /* NSTimer+PFObjC.m in Sources */,
 				454B36F71BFEB4EF00FA085C /* PFQRCode.m in Sources */,

@@ -20,9 +20,6 @@
 * `NSTimer+PFObjC`      - NSTimer类目
 * `UIView+PFObjC`       - UIView类目
 
-#### Debug
-* `PFObjCDebug`         - 调试
-
 #### Framework
 * `PFConfigure`         - 本类库常用宏
 * `PFFile`              - 实现文件生成和读写功能
@@ -32,7 +29,7 @@
 * `PFTime`              - 实现时间获取和转换功能
  
 #### Other
-* `PFObjC.h` - 类库接口
+* `PFObjC`              - 类库接口与调试
 
 安装
 --- 

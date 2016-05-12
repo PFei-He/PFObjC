@@ -1,8 +1,8 @@
 //
-//  PFObjCDebug.h
+//  PFObjC.m
 //  PFObjC
 //
-//  Created by PFei_He on 16/5/11.
+//  Created by PFei_He on 16/5/12.
 //  Copyright © 2016年 PF-Lib. All rights reserved.
 //
 //  https://github.com/PFei-He/PFObjC
@@ -25,19 +25,17 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ***** 调试 *****
+//  ***** 类库接口与调试 *****
 //
 
-#import <Foundation/Foundation.h>
+#import "PFObjC.h"
 
-@interface PFObjCDebug : NSObject
+@implementation PFObjC
 
-/**
- *  @brief 版本号
- *  @note 无
- *  @param 无
- *  @return 版本号
- */
-+ (NSString *)version;
+//版本号
++ (NSString *)debugVersion
+{
+    return @"[ PFObjC ][ INFO ] current version: 0.4.1";
+}
 
 @end
